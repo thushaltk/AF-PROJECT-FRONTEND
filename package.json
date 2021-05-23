@@ -1,19 +1,19 @@
 {
-  "name": "project",
+  "name": "af-project-frontend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.jsx",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel public/index.html"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thushaltk/AF-PROJECT-FRONTEND.git"
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "parcel": "^2.0.0-beta.2"
+  "bugs": {
+    "url": "https://github.com/thushaltk/AF-PROJECT-FRONTEND/issues"
   },
-  "dependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
-  }
+  "homepage": "https://github.com/thushaltk/AF-PROJECT-FRONTEND#readme"
 }
