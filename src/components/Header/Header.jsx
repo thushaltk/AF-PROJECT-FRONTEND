@@ -117,13 +117,13 @@ const Header = () => {
               </a>
               <div className="dropdown-menu dropdown-menu-right">
                 <a className="dropdown-item" href="#">
-                  Admin Login{" "}
+                  Admin Login
                 </a>
                 <a className="dropdown-item" href="#">
-                  Reviewer Login{" "}
+                  Reviewer Login
                 </a>
                 <a className="dropdown-item" href="#">
-                  Editor Login{" "}
+                  Editor Login
                 </a>
               </div>
             </li>

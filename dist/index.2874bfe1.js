@@ -22269,7 +22269,7 @@ const Header = ()=>{
             lineNumber: 119
         },
         __self: undefined
-    }, "Admin Login", " "), /*#__PURE__*/ _reactDefault.default.createElement("a", {
+    }, "Admin Login"), /*#__PURE__*/ _reactDefault.default.createElement("a", {
         className: "dropdown-item",
         href: "#",
         __source: {
@@ -22277,7 +22277,7 @@ const Header = ()=>{
             lineNumber: 122
         },
         __self: undefined
-    }, "Reviewer Login", " "), /*#__PURE__*/ _reactDefault.default.createElement("a", {
+    }, "Reviewer Login"), /*#__PURE__*/ _reactDefault.default.createElement("a", {
         className: "dropdown-item",
         href: "#",
         __source: {
@@ -22285,7 +22285,7 @@ const Header = ()=>{
             lineNumber: 125
         },
         __self: undefined
-    }, "Editor Login", " "))))))));
+    }, "Editor Login"))))))));
 };
 _c = Header;
 exports.default = Header;
@@ -22460,66 +22460,83 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _aos = require("aos");
+var _aosDefault = parcelHelpers.interopDefault(_aos);
 var _button = require("@material-ui/core/Button");
 var _buttonDefault = parcelHelpers.interopDefault(_button);
+var _card = require("@material-ui/core/Card");
+var _cardDefault = parcelHelpers.interopDefault(_card);
+var _cardActions = require("@material-ui/core/CardActions");
+var _cardActionsDefault = parcelHelpers.interopDefault(_cardActions);
+var _cardContent = require("@material-ui/core/CardContent");
+var _cardContentDefault = parcelHelpers.interopDefault(_cardContent);
+var _typography = require("@material-ui/core/Typography");
+var _typographyDefault = parcelHelpers.interopDefault(_typography);
 var _landingPageCss = require("./LandingPage.css");
+var _s = $RefreshSig$();
 const LandingPage = ()=>{
+    _s();
+    _react.useEffect(()=>{
+        _aosDefault.default.init({
+            duration: 2000
+        });
+    }, []);
     return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
         __source: {
             fileName: "E:\\3rd Year (1st Semester) Materials\\SE3040-Application Framework-AF\\new\\Lectures\\PROJECT\\New folder\\AF-PROJECT-FRONTEND\\src\\components\\LandingPage\\LandingPage.jsx",
-            lineNumber: 8
+            lineNumber: 18
         },
         __self: undefined
     }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
         className: "banner",
         __source: {
             fileName: "E:\\3rd Year (1st Semester) Materials\\SE3040-Application Framework-AF\\new\\Lectures\\PROJECT\\New folder\\AF-PROJECT-FRONTEND\\src\\components\\LandingPage\\LandingPage.jsx",
-            lineNumber: 9
+            lineNumber: 19
         },
         __self: undefined
     }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
         className: "container",
         __source: {
             fileName: "E:\\3rd Year (1st Semester) Materials\\SE3040-Application Framework-AF\\new\\Lectures\\PROJECT\\New folder\\AF-PROJECT-FRONTEND\\src\\components\\LandingPage\\LandingPage.jsx",
-            lineNumber: 10
+            lineNumber: 20
         },
         __self: undefined
     }, /*#__PURE__*/ _reactDefault.default.createElement("br", {
         __source: {
             fileName: "E:\\3rd Year (1st Semester) Materials\\SE3040-Application Framework-AF\\new\\Lectures\\PROJECT\\New folder\\AF-PROJECT-FRONTEND\\src\\components\\LandingPage\\LandingPage.jsx",
-            lineNumber: 11
+            lineNumber: 21
         },
         __self: undefined
     }), /*#__PURE__*/ _reactDefault.default.createElement("br", {
         __source: {
             fileName: "E:\\3rd Year (1st Semester) Materials\\SE3040-Application Framework-AF\\new\\Lectures\\PROJECT\\New folder\\AF-PROJECT-FRONTEND\\src\\components\\LandingPage\\LandingPage.jsx",
-            lineNumber: 11
+            lineNumber: 22
         },
         __self: undefined
     }), /*#__PURE__*/ _reactDefault.default.createElement("br", {
         __source: {
             fileName: "E:\\3rd Year (1st Semester) Materials\\SE3040-Application Framework-AF\\new\\Lectures\\PROJECT\\New folder\\AF-PROJECT-FRONTEND\\src\\components\\LandingPage\\LandingPage.jsx",
-            lineNumber: 11
+            lineNumber: 23
         },
         __self: undefined
     }), /*#__PURE__*/ _reactDefault.default.createElement("h1", {
         className: "font-weight-semibold",
         __source: {
             fileName: "E:\\3rd Year (1st Semester) Materials\\SE3040-Application Framework-AF\\new\\Lectures\\PROJECT\\New folder\\AF-PROJECT-FRONTEND\\src\\components\\LandingPage\\LandingPage.jsx",
-            lineNumber: 12
+            lineNumber: 24
         },
         __self: undefined
     }, "INTERNATIONAL CONFERENCE ON APPLICATION FRAMWORKS 2021"), /*#__PURE__*/ _reactDefault.default.createElement("h6", {
         className: "font-weight-normal text-muted pb-3",
         __source: {
             fileName: "E:\\3rd Year (1st Semester) Materials\\SE3040-Application Framework-AF\\new\\Lectures\\PROJECT\\New folder\\AF-PROJECT-FRONTEND\\src\\components\\LandingPage\\LandingPage.jsx",
-            lineNumber: 13
+            lineNumber: 27
         },
         __self: undefined
     }, "Simple is a simple template with a creative design that solves all your marketing and SEO queries."), /*#__PURE__*/ _reactDefault.default.createElement("div", {
         __source: {
             fileName: "E:\\3rd Year (1st Semester) Materials\\SE3040-Application Framework-AF\\new\\Lectures\\PROJECT\\New folder\\AF-PROJECT-FRONTEND\\src\\components\\LandingPage\\LandingPage.jsx",
-            lineNumber: 14
+            lineNumber: 31
         },
         __self: undefined
     }, /*#__PURE__*/ _reactDefault.default.createElement(_buttonDefault.default, {
@@ -22527,13 +22544,13 @@ const LandingPage = ()=>{
         color: "primary",
         __source: {
             fileName: "E:\\3rd Year (1st Semester) Materials\\SE3040-Application Framework-AF\\new\\Lectures\\PROJECT\\New folder\\AF-PROJECT-FRONTEND\\src\\components\\LandingPage\\LandingPage.jsx",
-            lineNumber: 15
+            lineNumber: 32
         },
         __self: undefined
     }, "Learn more")), /*#__PURE__*/ _reactDefault.default.createElement("br", {
         __source: {
             fileName: "E:\\3rd Year (1st Semester) Materials\\SE3040-Application Framework-AF\\new\\Lectures\\PROJECT\\New folder\\AF-PROJECT-FRONTEND\\src\\components\\LandingPage\\LandingPage.jsx",
-            lineNumber: 17
+            lineNumber: 36
         },
         __self: undefined
     }), /*#__PURE__*/ _reactDefault.default.createElement("img", {
@@ -22542,23 +22559,114 @@ const LandingPage = ()=>{
         className: "img img-fluid",
         __source: {
             fileName: "E:\\3rd Year (1st Semester) Materials\\SE3040-Application Framework-AF\\new\\Lectures\\PROJECT\\New folder\\AF-PROJECT-FRONTEND\\src\\components\\LandingPage\\LandingPage.jsx",
-            lineNumber: 18
+            lineNumber: 37
         },
         __self: undefined
     })), /*#__PURE__*/ _reactDefault.default.createElement("br", {
         __source: {
             fileName: "E:\\3rd Year (1st Semester) Materials\\SE3040-Application Framework-AF\\new\\Lectures\\PROJECT\\New folder\\AF-PROJECT-FRONTEND\\src\\components\\LandingPage\\LandingPage.jsx",
-            lineNumber: 20
+            lineNumber: 43
         },
         __self: undefined
     }), /*#__PURE__*/ _reactDefault.default.createElement("br", {
         __source: {
             fileName: "E:\\3rd Year (1st Semester) Materials\\SE3040-Application Framework-AF\\new\\Lectures\\PROJECT\\New folder\\AF-PROJECT-FRONTEND\\src\\components\\LandingPage\\LandingPage.jsx",
-            lineNumber: 20
+            lineNumber: 44
+        },
+        __self: undefined
+    })), /*#__PURE__*/ _reactDefault.default.createElement("br", {
+        __source: {
+            fileName: "E:\\3rd Year (1st Semester) Materials\\SE3040-Application Framework-AF\\new\\Lectures\\PROJECT\\New folder\\AF-PROJECT-FRONTEND\\src\\components\\LandingPage\\LandingPage.jsx",
+            lineNumber: 46
+        },
+        __self: undefined
+    }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+        className: "row",
+        style: {
+            width: "100%",
+            alignItems: "center"
+        },
+        __source: {
+            fileName: "E:\\3rd Year (1st Semester) Materials\\SE3040-Application Framework-AF\\new\\Lectures\\PROJECT\\New folder\\AF-PROJECT-FRONTEND\\src\\components\\LandingPage\\LandingPage.jsx",
+            lineNumber: 47
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+        className: "col col-sm-2",
+        __source: {
+            fileName: "E:\\3rd Year (1st Semester) Materials\\SE3040-Application Framework-AF\\new\\Lectures\\PROJECT\\New folder\\AF-PROJECT-FRONTEND\\src\\components\\LandingPage\\LandingPage.jsx",
+            lineNumber: 48
+        },
+        __self: undefined
+    }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+        className: "col col-sm-8",
+        __source: {
+            fileName: "E:\\3rd Year (1st Semester) Materials\\SE3040-Application Framework-AF\\new\\Lectures\\PROJECT\\New folder\\AF-PROJECT-FRONTEND\\src\\components\\LandingPage\\LandingPage.jsx",
+            lineNumber: 49
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_cardDefault.default, {
+        className: "card",
+        "data-aos": "fade-up",
+        __source: {
+            fileName: "E:\\3rd Year (1st Semester) Materials\\SE3040-Application Framework-AF\\new\\Lectures\\PROJECT\\New folder\\AF-PROJECT-FRONTEND\\src\\components\\LandingPage\\LandingPage.jsx",
+            lineNumber: 50
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_cardContentDefault.default, {
+        __source: {
+            fileName: "E:\\3rd Year (1st Semester) Materials\\SE3040-Application Framework-AF\\new\\Lectures\\PROJECT\\New folder\\AF-PROJECT-FRONTEND\\src\\components\\LandingPage\\LandingPage.jsx",
+            lineNumber: 51
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_typographyDefault.default, {
+        color: "textSecondary",
+        gutterBottom: true,
+        __source: {
+            fileName: "E:\\3rd Year (1st Semester) Materials\\SE3040-Application Framework-AF\\new\\Lectures\\PROJECT\\New folder\\AF-PROJECT-FRONTEND\\src\\components\\LandingPage\\LandingPage.jsx",
+            lineNumber: 52
+        },
+        __self: undefined
+    }, "About our conference"), /*#__PURE__*/ _reactDefault.default.createElement(_typographyDefault.default, {
+        variant: "h5",
+        component: "h2",
+        __source: {
+            fileName: "E:\\3rd Year (1st Semester) Materials\\SE3040-Application Framework-AF\\new\\Lectures\\PROJECT\\New folder\\AF-PROJECT-FRONTEND\\src\\components\\LandingPage\\LandingPage.jsx",
+            lineNumber: 55
+        },
+        __self: undefined
+    }, "3RD INTERNATIONAL CONFERENCE ON ADVANCEMENTS IN COMPUTING 2021"), /*#__PURE__*/ _reactDefault.default.createElement(_typographyDefault.default, {
+        color: "textSecondary",
+        variant: "body",
+        component: "p",
+        __source: {
+            fileName: "E:\\3rd Year (1st Semester) Materials\\SE3040-Application Framework-AF\\new\\Lectures\\PROJECT\\New folder\\AF-PROJECT-FRONTEND\\src\\components\\LandingPage\\LandingPage.jsx",
+            lineNumber: 58
+        },
+        __self: undefined
+    }, "The 3rd International conference on advancements in computing -2021 (ICAC2021) is organized by the Faculty of Computing of the Sri Lanka Institute of Information Technology (SLIIT) as an open forum for academics along with industry professionals to present the latest findings and research output and practical deployments in the Computer Science and Information Technology domains. Primary objective of the ICAC is to uplift the research culture and the quality of research done by Sri Lankan researchers. This conference will create a platform for national and international researchers to showcase their research output, networking opportunities to discuss innovative ideas, and initiate collaborative work. ICAC 2019 and ICAC 2020 were successfully conducted with a technical co-sponsorship by IEEE Sri Lanka Section and all publications are available in IEEE Xplore digital library")), /*#__PURE__*/ _reactDefault.default.createElement(_cardActionsDefault.default, {
+        __source: {
+            fileName: "E:\\3rd Year (1st Semester) Materials\\SE3040-Application Framework-AF\\new\\Lectures\\PROJECT\\New folder\\AF-PROJECT-FRONTEND\\src\\components\\LandingPage\\LandingPage.jsx",
+            lineNumber: 76
+        },
+        __self: undefined
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_buttonDefault.default, {
+        size: "small",
+        __source: {
+            fileName: "E:\\3rd Year (1st Semester) Materials\\SE3040-Application Framework-AF\\new\\Lectures\\PROJECT\\New folder\\AF-PROJECT-FRONTEND\\src\\components\\LandingPage\\LandingPage.jsx",
+            lineNumber: 77
+        },
+        __self: undefined
+    }, "Learn More")))), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+        className: "col col-sm-2",
+        __source: {
+            fileName: "E:\\3rd Year (1st Semester) Materials\\SE3040-Application Framework-AF\\new\\Lectures\\PROJECT\\New folder\\AF-PROJECT-FRONTEND\\src\\components\\LandingPage\\LandingPage.jsx",
+            lineNumber: 81
         },
         __self: undefined
     }))));
 };
+_s(LandingPage, "OD7bBpZva5O2jO+Puf00hKivP7c=");
 _c = LandingPage;
 exports.default = LandingPage;
 var _c;
@@ -22569,7 +22677,7 @@ $RefreshReg$(_c, "LandingPage");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"3b2NM","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./LandingPage.css":"5Fq72","@material-ui/core/Button":"1Xm5M"}],"5Fq72":[function() {},{}],"1Xm5M":[function(require,module,exports) {
+},{"react":"3b2NM","@parcel/transformer-js/src/esmodule-helpers.js":"367CR","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./LandingPage.css":"5Fq72","@material-ui/core/Button":"1Xm5M","aos":"7rvwx","@material-ui/core/Card":"37gLn","@material-ui/core/CardActions":"1bjjB","@material-ui/core/CardContent":"VtMKY","@material-ui/core/Typography":"3wcF9"}],"5Fq72":[function() {},{}],"1Xm5M":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>_buttonDefault.default
@@ -33638,7 +33746,973 @@ function capitalize(string) {
 }
 exports.default = capitalize;
 
-},{"@material-ui/utils":"11kc7","@parcel/transformer-js/src/esmodule-helpers.js":"367CR"}],"detPq":[function(require,module,exports) {
+},{"@material-ui/utils":"11kc7","@parcel/transformer-js/src/esmodule-helpers.js":"367CR"}],"7rvwx":[function(require,module,exports) {
+(function(e, t) {
+    "object" == typeof exports && "object" == typeof module ? module.exports = t() : "function" == typeof define && define.amd ? define([], t) : "object" == typeof exports ? exports.AOS = t() : e.AOS = t();
+})(this, function() {
+    return (function(e) {
+        function t(o) {
+            if (n[o]) return n[o].exports;
+            var i = n[o] = {
+                exports: {
+                },
+                id: o,
+                loaded: false
+            };
+            return e[o].call(i.exports, i, i.exports, t), i.loaded = true, i.exports;
+        }
+        var n = {
+        };
+        return t.m = e, t.c = n, t.p = "dist/", t(0);
+    })([
+        function(e, t, n) {
+            "use strict";
+            function o(e1) {
+                return e1 && e1.__esModule ? e1 : {
+                    default: e1
+                };
+            }
+            var i = Object.assign || function(e1) {
+                for(var t1 = 1; t1 < arguments.length; t1++){
+                    var n1 = arguments[t1];
+                    for(var o1 in n1)Object.prototype.hasOwnProperty.call(n1, o1) && (e1[o1] = n1[o1]);
+                }
+                return e1;
+            }, r = n(1), a = (o(r), n(6)), u = o(a), c = n(7), s = o(c), f = n(8), d = o(f), l = n(9), p = o(l), m = n(10), b = o(m), v = n(11), y = o(v), g = n(14), h = o(g), w = [], k = false, x = {
+                offset: 120,
+                delay: 0,
+                easing: "ease",
+                duration: 400,
+                disable: false,
+                once: false,
+                startEvent: "DOMContentLoaded",
+                throttleDelay: 99,
+                debounceDelay: 50,
+                disableMutationObserver: false
+            }, j = function() {
+                var e1 = arguments.length > 0 && (void 0) !== arguments[0] && arguments[0];
+                if (e1 && (k = true), k) return w = y.default(w, x), b.default(w, x.once), w;
+            }, O = function() {
+                w = h.default(), j();
+            }, M = function() {
+                w.forEach(function(e1, t1) {
+                    e1.node.removeAttribute("data-aos"), e1.node.removeAttribute("data-aos-easing"), e1.node.removeAttribute("data-aos-duration"), e1.node.removeAttribute("data-aos-delay");
+                });
+            }, S = function(e1) {
+                return e1 === true || "mobile" === e1 && p.default.mobile() || "phone" === e1 && p.default.phone() || "tablet" === e1 && p.default.tablet() || "function" == typeof e1 && e1() === true;
+            }, _ = function(e1) {
+                x = i(x, e1), w = h.default();
+                var t1 = document.all && !window.atob;
+                return S(x.disable) || t1 ? M() : (x.disableMutationObserver || d.default.isSupported() || (console.info('\n      aos: MutationObserver is not supported on this browser,\n      code mutations observing has been disabled.\n      You may have to call "refreshHard()" by yourself.\n    '), x.disableMutationObserver = true), document.querySelector("body").setAttribute("data-aos-easing", x.easing), document.querySelector("body").setAttribute("data-aos-duration", x.duration), document.querySelector("body").setAttribute("data-aos-delay", x.delay), "DOMContentLoaded" === x.startEvent && [
+                    "complete",
+                    "interactive"
+                ].indexOf(document.readyState) > -1 ? j(true) : "load" === x.startEvent ? window.addEventListener(x.startEvent, function() {
+                    j(true);
+                }) : document.addEventListener(x.startEvent, function() {
+                    j(true);
+                }), window.addEventListener("resize", s.default(j, x.debounceDelay, true)), window.addEventListener("orientationchange", s.default(j, x.debounceDelay, true)), window.addEventListener("scroll", u.default(function() {
+                    b.default(w, x.once);
+                }, x.throttleDelay)), x.disableMutationObserver || d.default.ready("[data-aos]", O), w);
+            };
+            e.exports = {
+                init: _,
+                refresh: j,
+                refreshHard: O
+            };
+        },
+        function(e, t) {
+        },
+        ,
+        ,
+        ,
+        ,
+        function(e, t) {
+            (function(t1) {
+                function n2(e1, t2, n3) {
+                    function o2(t3) {
+                        var n4 = b, o3 = v;
+                        return b = v = void 0, k = t3, g = e1.apply(o3, n4);
+                    }
+                    function r(e2) {
+                        return k = e2, h = setTimeout(f, t2), M ? o2(e2) : g;
+                    }
+                    function a(e2) {
+                        var n4 = e2 - w, o3 = e2 - k, i = t2 - n4;
+                        return S ? j(i, y - o3) : i;
+                    }
+                    function c(e2) {
+                        var n4 = e2 - w, o3 = e2 - k;
+                        return (void 0) === w || n4 >= t2 || n4 < 0 || S && o3 >= y;
+                    }
+                    function f() {
+                        var e2 = O();
+                        return c(e2) ? d(e2) : void (h = setTimeout(f, a(e2)));
+                    }
+                    function d(e2) {
+                        return h = void 0, _ && b ? o2(e2) : (b = v = void 0, g);
+                    }
+                    function l() {
+                        (void 0) !== h && clearTimeout(h), k = 0, b = w = v = h = void 0;
+                    }
+                    function p() {
+                        return (void 0) === h ? g : d(O());
+                    }
+                    function m() {
+                        var e2 = O(), n4 = c(e2);
+                        if (b = arguments, v = this, w = e2, n4) {
+                            if ((void 0) === h) return r(w);
+                            if (S) return h = setTimeout(f, t2), o2(w);
+                        }
+                        return (void 0) === h && (h = setTimeout(f, t2)), g;
+                    }
+                    var b, v, y, g, h, w, k = 0, M = false, S = false, _ = true;
+                    if ("function" != typeof e1) throw new TypeError(s);
+                    return t2 = u(t2) || 0, i(n3) && (M = !!n3.leading, S = "maxWait" in n3, y = S ? x(u(n3.maxWait) || 0, t2) : y, _ = "trailing" in n3 ? !!n3.trailing : _), m.cancel = l, m.flush = p, m;
+                }
+                function o2(e1, t2, o3) {
+                    var r = true, a = true;
+                    if ("function" != typeof e1) throw new TypeError(s);
+                    return i(o3) && (r = "leading" in o3 ? !!o3.leading : r, a = "trailing" in o3 ? !!o3.trailing : a), n2(e1, t2, {
+                        leading: r,
+                        maxWait: t2,
+                        trailing: a
+                    });
+                }
+                function i(e1) {
+                    var t2 = "undefined" == typeof e1 ? "undefined" : c(e1);
+                    return !!e1 && ("object" == t2 || "function" == t2);
+                }
+                function r(e1) {
+                    return !!e1 && "object" == ("undefined" == typeof e1 ? "undefined" : c(e1));
+                }
+                function a(e1) {
+                    return "symbol" == ("undefined" == typeof e1 ? "undefined" : c(e1)) || r(e1) && k.call(e1) == d;
+                }
+                function u(e1) {
+                    if ("number" == typeof e1) return e1;
+                    if (a(e1)) return f;
+                    if (i(e1)) {
+                        var t2 = "function" == typeof e1.valueOf ? e1.valueOf() : e1;
+                        e1 = i(t2) ? t2 + "" : t2;
+                    }
+                    if ("string" != typeof e1) return 0 === e1 ? e1 : +e1;
+                    e1 = e1.replace(l, "");
+                    var n3 = m.test(e1);
+                    return n3 || b.test(e1) ? v(e1.slice(2), n3 ? 2 : 8) : p.test(e1) ? f : +e1;
+                }
+                var c = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e1) {
+                    return typeof e1;
+                } : function(e1) {
+                    return e1 && "function" == typeof Symbol && e1.constructor === Symbol && e1 !== Symbol.prototype ? "symbol" : typeof e1;
+                }, s = "Expected a function", f = NaN, d = "[object Symbol]", l = /^\s+|\s+$/g, p = /^[-+]0x[0-9a-f]+$/i, m = /^0b[01]+$/i, b = /^0o[0-7]+$/i, v = parseInt, y = "object" == ("undefined" == typeof t1 ? "undefined" : c(t1)) && t1 && t1.Object === Object && t1, g = "object" == ("undefined" == typeof self ? "undefined" : c(self)) && self && self.Object === Object && self, h = y || g || Function("return this")(), w = Object.prototype, k = w.toString, x = Math.max, j = Math.min, O = function() {
+                    return h.Date.now();
+                };
+                e.exports = o2;
+            }).call(t, function() {
+                return this;
+            }());
+        },
+        function(e, t1) {
+            (function(t3) {
+                function n2(e1, t4, n3) {
+                    function i(t5) {
+                        var n4 = b, o2 = v;
+                        return b = v = void 0, O = t5, g = e1.apply(o2, n4);
+                    }
+                    function r(e2) {
+                        return O = e2, h = setTimeout(f, t4), M ? i(e2) : g;
+                    }
+                    function u(e2) {
+                        var n4 = e2 - w, o2 = e2 - O, i1 = t4 - n4;
+                        return S ? x(i1, y - o2) : i1;
+                    }
+                    function s(e2) {
+                        var n4 = e2 - w, o2 = e2 - O;
+                        return (void 0) === w || n4 >= t4 || n4 < 0 || S && o2 >= y;
+                    }
+                    function f() {
+                        var e2 = j();
+                        return s(e2) ? d(e2) : void (h = setTimeout(f, u(e2)));
+                    }
+                    function d(e2) {
+                        return h = void 0, _ && b ? i(e2) : (b = v = void 0, g);
+                    }
+                    function l() {
+                        (void 0) !== h && clearTimeout(h), O = 0, b = w = v = h = void 0;
+                    }
+                    function p() {
+                        return (void 0) === h ? g : d(j());
+                    }
+                    function m() {
+                        var e2 = j(), n4 = s(e2);
+                        if (b = arguments, v = this, w = e2, n4) {
+                            if ((void 0) === h) return r(w);
+                            if (S) return h = setTimeout(f, t4), i(w);
+                        }
+                        return (void 0) === h && (h = setTimeout(f, t4)), g;
+                    }
+                    var b, v, y, g, h, w, O = 0, M = false, S = false, _ = true;
+                    if ("function" != typeof e1) throw new TypeError(c);
+                    return t4 = a(t4) || 0, o2(n3) && (M = !!n3.leading, S = "maxWait" in n3, y = S ? k(a(n3.maxWait) || 0, t4) : y, _ = "trailing" in n3 ? !!n3.trailing : _), m.cancel = l, m.flush = p, m;
+                }
+                function o2(e1) {
+                    var t4 = "undefined" == typeof e1 ? "undefined" : u(e1);
+                    return !!e1 && ("object" == t4 || "function" == t4);
+                }
+                function i(e1) {
+                    return !!e1 && "object" == ("undefined" == typeof e1 ? "undefined" : u(e1));
+                }
+                function r(e1) {
+                    return "symbol" == ("undefined" == typeof e1 ? "undefined" : u(e1)) || i(e1) && w.call(e1) == f;
+                }
+                function a(e1) {
+                    if ("number" == typeof e1) return e1;
+                    if (r(e1)) return s;
+                    if (o2(e1)) {
+                        var t4 = "function" == typeof e1.valueOf ? e1.valueOf() : e1;
+                        e1 = o2(t4) ? t4 + "" : t4;
+                    }
+                    if ("string" != typeof e1) return 0 === e1 ? e1 : +e1;
+                    e1 = e1.replace(d, "");
+                    var n3 = p.test(e1);
+                    return n3 || m.test(e1) ? b(e1.slice(2), n3 ? 2 : 8) : l.test(e1) ? s : +e1;
+                }
+                var u = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e1) {
+                    return typeof e1;
+                } : function(e1) {
+                    return e1 && "function" == typeof Symbol && e1.constructor === Symbol && e1 !== Symbol.prototype ? "symbol" : typeof e1;
+                }, c = "Expected a function", s = NaN, f = "[object Symbol]", d = /^\s+|\s+$/g, l = /^[-+]0x[0-9a-f]+$/i, p = /^0b[01]+$/i, m = /^0o[0-7]+$/i, b = parseInt, v = "object" == ("undefined" == typeof t3 ? "undefined" : u(t3)) && t3 && t3.Object === Object && t3, y = "object" == ("undefined" == typeof self ? "undefined" : u(self)) && self && self.Object === Object && self, g = v || y || Function("return this")(), h = Object.prototype, w = h.toString, k = Math.max, x = Math.min, j = function() {
+                    return g.Date.now();
+                };
+                e.exports = n2;
+            }).call(t1, function() {
+                return this;
+            }());
+        },
+        function(e, t1) {
+            "use strict";
+            function n2(e1) {
+                var t3 = void 0, o2 = void 0, i = void 0;
+                for(t3 = 0; t3 < e1.length; t3 += 1){
+                    if (o2 = e1[t3], o2.dataset && o2.dataset.aos) return true;
+                    if (i = o2.children && n2(o2.children)) return true;
+                }
+                return false;
+            }
+            function o2() {
+                return window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
+            }
+            function i() {
+                return !!o2();
+            }
+            function r(e1, t3) {
+                var n3 = window.document, i1 = o2(), r1 = new i1(a);
+                u = t3, r1.observe(n3.documentElement, {
+                    childList: true,
+                    subtree: true,
+                    removedNodes: true
+                });
+            }
+            function a(e1) {
+                e1 && e1.forEach(function(e2) {
+                    var t3 = Array.prototype.slice.call(e2.addedNodes), o3 = Array.prototype.slice.call(e2.removedNodes), i1 = t3.concat(o3);
+                    if (n2(i1)) return u();
+                });
+            }
+            Object.defineProperty(t1, "__esModule", {
+                value: true
+            });
+            var u = function() {
+            };
+            t1.default = {
+                isSupported: i,
+                ready: r
+            };
+        },
+        function(e, t1) {
+            "use strict";
+            function n2(e1, t3) {
+                if (!(e1 instanceof t3)) throw new TypeError("Cannot call a class as a function");
+            }
+            function o2() {
+                return navigator.userAgent || navigator.vendor || window.opera || "";
+            }
+            Object.defineProperty(t1, "__esModule", {
+                value: true
+            });
+            var i = function() {
+                function e1(e2, t3) {
+                    for(var n3 = 0; n3 < t3.length; n3++){
+                        var o3 = t3[n3];
+                        o3.enumerable = o3.enumerable || false, o3.configurable = true, "value" in o3 && (o3.writable = true), Object.defineProperty(e2, o3.key, o3);
+                    }
+                }
+                return function(t3, n3, o4) {
+                    return n3 && e1(t3.prototype, n3), o4 && e1(t3, o4), t3;
+                };
+            }(), r = /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i, a = /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i, u = /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i, c = /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i, s = function() {
+                function e1() {
+                    n2(this, e1);
+                }
+                return i(e1, [
+                    {
+                        key: "phone",
+                        value: function() {
+                            var e2 = o2();
+                            return !(!r.test(e2) && !a.test(e2.substr(0, 4)));
+                        }
+                    },
+                    {
+                        key: "mobile",
+                        value: function() {
+                            var e2 = o2();
+                            return !(!u.test(e2) && !c.test(e2.substr(0, 4)));
+                        }
+                    },
+                    {
+                        key: "tablet",
+                        value: function() {
+                            return this.mobile() && !this.phone();
+                        }
+                    }
+                ]), e1;
+            }();
+            t1.default = new s;
+        },
+        function(e, t1) {
+            "use strict";
+            Object.defineProperty(t1, "__esModule", {
+                value: true
+            });
+            var n2 = function(e1, t3, n3) {
+                var o2 = e1.node.getAttribute("data-aos-once");
+                t3 > e1.position ? e1.node.classList.add("aos-animate") : "undefined" != typeof o2 && ("false" === o2 || !n3 && "true" !== o2) && e1.node.classList.remove("aos-animate");
+            }, o2 = function(e1, t3) {
+                var o4 = window.pageYOffset, i = window.innerHeight;
+                e1.forEach(function(e2, r) {
+                    n2(e2, i + o4, t3);
+                });
+            };
+            t1.default = o2;
+        },
+        function(e, t1, n2) {
+            "use strict";
+            function o2(e1) {
+                return e1 && e1.__esModule ? e1 : {
+                    default: e1
+                };
+            }
+            Object.defineProperty(t1, "__esModule", {
+                value: true
+            });
+            var i = n2(12), r = o2(i), a = function(e1, t3) {
+                return e1.forEach(function(e2, n3) {
+                    e2.node.classList.add("aos-init"), e2.position = r.default(e2.node, t3.offset);
+                }), e1;
+            };
+            t1.default = a;
+        },
+        function(e, t1, n2) {
+            "use strict";
+            function o2(e1) {
+                return e1 && e1.__esModule ? e1 : {
+                    default: e1
+                };
+            }
+            Object.defineProperty(t1, "__esModule", {
+                value: true
+            });
+            var i = n2(13), r = o2(i), a = function(e1, t3) {
+                var n3 = 0, o4 = 0, i1 = window.innerHeight, a1 = {
+                    offset: e1.getAttribute("data-aos-offset"),
+                    anchor: e1.getAttribute("data-aos-anchor"),
+                    anchorPlacement: e1.getAttribute("data-aos-anchor-placement")
+                };
+                switch(a1.offset && !isNaN(a1.offset) && (o4 = parseInt(a1.offset)), a1.anchor && document.querySelectorAll(a1.anchor) && (e1 = document.querySelectorAll(a1.anchor)[0]), n3 = r.default(e1).top, a1.anchorPlacement){
+                    case "top-bottom":
+                        break;
+                    case "center-bottom":
+                        n3 += e1.offsetHeight / 2;
+                        break;
+                    case "bottom-bottom":
+                        n3 += e1.offsetHeight;
+                        break;
+                    case "top-center":
+                        n3 += i1 / 2;
+                        break;
+                    case "bottom-center":
+                        n3 += i1 / 2 + e1.offsetHeight;
+                        break;
+                    case "center-center":
+                        n3 += i1 / 2 + e1.offsetHeight / 2;
+                        break;
+                    case "top-top":
+                        n3 += i1;
+                        break;
+                    case "bottom-top":
+                        n3 += e1.offsetHeight + i1;
+                        break;
+                    case "center-top":
+                        n3 += e1.offsetHeight / 2 + i1;
+                }
+                return a1.anchorPlacement || a1.offset || isNaN(t3) || (o4 = t3), n3 + o4;
+            };
+            t1.default = a;
+        },
+        function(e, t1) {
+            "use strict";
+            Object.defineProperty(t1, "__esModule", {
+                value: true
+            });
+            var n2 = function(e1) {
+                for(var t3 = 0, n3 = 0; e1 && !isNaN(e1.offsetLeft) && !isNaN(e1.offsetTop);)t3 += e1.offsetLeft - ("BODY" != e1.tagName ? e1.scrollLeft : 0), n3 += e1.offsetTop - ("BODY" != e1.tagName ? e1.scrollTop : 0), e1 = e1.offsetParent;
+                return {
+                    top: n3,
+                    left: t3
+                };
+            };
+            t1.default = n2;
+        },
+        function(e, t1) {
+            "use strict";
+            Object.defineProperty(t1, "__esModule", {
+                value: true
+            });
+            var n2 = function(e1) {
+                return e1 = e1 || document.querySelectorAll("[data-aos]"), Array.prototype.map.call(e1, function(e2) {
+                    return {
+                        node: e2
+                    };
+                });
+            };
+            t1.default = n2;
+        }
+    ]);
+});
+
+},{}],"37gLn":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>_cardDefault.default
+);
+var _card = require("./Card");
+var _cardDefault = parcelHelpers.interopDefault(_card);
+
+},{"./Card":"6pTMt","@parcel/transformer-js/src/esmodule-helpers.js":"367CR"}],"6pTMt":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "styles", ()=>styles
+);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _objectWithoutProperties = require("@babel/runtime/helpers/esm/objectWithoutProperties");
+var _objectWithoutPropertiesDefault = parcelHelpers.interopDefault(_objectWithoutProperties);
+var _react = require("react");
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _clsx = require("clsx");
+var _clsxDefault = parcelHelpers.interopDefault(_clsx);
+var _paper = require("../Paper");
+var _paperDefault = parcelHelpers.interopDefault(_paper);
+var _withStyles = require("../styles/withStyles");
+var _withStylesDefault = parcelHelpers.interopDefault(_withStyles);
+var styles = {
+    /* Styles applied to the root element. */ root: {
+        overflow: 'hidden'
+    }
+};
+var Card = /*#__PURE__*/ _react.forwardRef(function Card1(props, ref) {
+    var classes = props.classes, className = props.className, _props$raised = props.raised, raised = _props$raised === void 0 ? false : _props$raised, other = _objectWithoutPropertiesDefault.default(props, [
+        "classes",
+        "className",
+        "raised"
+    ]);
+    return(/*#__PURE__*/ _react.createElement(_paperDefault.default, _extendsDefault.default({
+        className: _clsxDefault.default(classes.root, className),
+        elevation: raised ? 8 : 1,
+        ref: ref
+    }, other)));
+});
+Card.propTypes = {
+    // ----------------------------- Warning --------------------------------
+    // | These PropTypes are generated from the TypeScript type definitions |
+    // |     To update them edit the d.ts file and run "yarn proptypes"     |
+    // ----------------------------------------------------------------------
+    /**
+   * The content of the component.
+   */ children: _propTypesDefault.default.node,
+    /**
+   * Override or extend the styles applied to the component.
+   * See [CSS API](#css) below for more details.
+   */ classes: _propTypesDefault.default.object,
+    /**
+   * @ignore
+   */ className: _propTypesDefault.default.string,
+    /**
+   * If `true`, the card will use raised styling.
+   */ raised: _propTypesDefault.default.bool
+};
+exports.default = _withStylesDefault.default(styles, {
+    name: 'MuiCard'
+})(Card);
+
+},{"@babel/runtime/helpers/esm/extends":"5qnVv","@babel/runtime/helpers/esm/objectWithoutProperties":"5UtKX","react":"3b2NM","prop-types":"4dfy5","clsx":"29lTl","../Paper":"5Fj22","../styles/withStyles":"4q1Sj","@parcel/transformer-js/src/esmodule-helpers.js":"367CR"}],"5Fj22":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>_paperDefault.default
+);
+var _paper = require("./Paper");
+var _paperDefault = parcelHelpers.interopDefault(_paper);
+
+},{"./Paper":"73HmR","@parcel/transformer-js/src/esmodule-helpers.js":"367CR"}],"73HmR":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "styles", ()=>styles
+);
+var _objectWithoutProperties = require("@babel/runtime/helpers/esm/objectWithoutProperties");
+var _objectWithoutPropertiesDefault = parcelHelpers.interopDefault(_objectWithoutProperties);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _react = require("react");
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _clsx = require("clsx");
+var _clsxDefault = parcelHelpers.interopDefault(_clsx);
+var _utils = require("@material-ui/utils");
+var _withStyles = require("../styles/withStyles");
+var _withStylesDefault = parcelHelpers.interopDefault(_withStyles);
+var styles = function styles1(theme) {
+    var elevations = {
+    };
+    theme.shadows.forEach(function(shadow, index) {
+        elevations["elevation".concat(index)] = {
+            boxShadow: shadow
+        };
+    });
+    return _extendsDefault.default({
+        /* Styles applied to the root element. */ root: {
+            backgroundColor: theme.palette.background.paper,
+            color: theme.palette.text.primary,
+            transition: theme.transitions.create('box-shadow')
+        },
+        /* Styles applied to the root element if `square={false}`. */ rounded: {
+            borderRadius: theme.shape.borderRadius
+        },
+        /* Styles applied to the root element if `variant="outlined"`. */ outlined: {
+            border: "1px solid ".concat(theme.palette.divider)
+        }
+    }, elevations);
+};
+var Paper = /*#__PURE__*/ _react.forwardRef(function Paper1(props, ref) {
+    var classes = props.classes, className = props.className, _props$component = props.component, Component = _props$component === void 0 ? 'div' : _props$component, _props$square = props.square, square = _props$square === void 0 ? false : _props$square, _props$elevation = props.elevation, elevation = _props$elevation === void 0 ? 1 : _props$elevation, _props$variant = props.variant, variant = _props$variant === void 0 ? 'elevation' : _props$variant, other = _objectWithoutPropertiesDefault.default(props, [
+        "classes",
+        "className",
+        "component",
+        "square",
+        "elevation",
+        "variant"
+    ]);
+    return(/*#__PURE__*/ _react.createElement(Component, _extendsDefault.default({
+        className: _clsxDefault.default(classes.root, className, variant === 'outlined' ? classes.outlined : classes["elevation".concat(elevation)], !square && classes.rounded),
+        ref: ref
+    }, other)));
+});
+Paper.propTypes = {
+    // ----------------------------- Warning --------------------------------
+    // | These PropTypes are generated from the TypeScript type definitions |
+    // |     To update them edit the d.ts file and run "yarn proptypes"     |
+    // ----------------------------------------------------------------------
+    /**
+   * The content of the component.
+   */ children: _propTypesDefault.default.node,
+    /**
+   * Override or extend the styles applied to the component.
+   * See [CSS API](#css) below for more details.
+   */ classes: _propTypesDefault.default.object,
+    /**
+   * @ignore
+   */ className: _propTypesDefault.default.string,
+    /**
+   * The component used for the root node.
+   * Either a string to use a HTML element or a component.
+   */ component: _propTypesDefault.default/* @typescript-to-proptypes-ignore */ .elementType,
+    /**
+   * Shadow depth, corresponds to `dp` in the spec.
+   * It accepts values between 0 and 24 inclusive.
+   */ elevation: _utils.chainPropTypes(_propTypesDefault.default.number, function(props) {
+        var classes = props.classes, elevation = props.elevation; // in case `withStyles` fails to inject we don't need this warning
+        if (classes === undefined) return null;
+        if (elevation != null && classes["elevation".concat(elevation)] === undefined) return new Error("Material-UI: This elevation `".concat(elevation, "` is not implemented."));
+        return null;
+    }),
+    /**
+   * If `true`, rounded corners are disabled.
+   */ square: _propTypesDefault.default.bool,
+    /**
+   * The variant to use.
+   */ variant: _propTypesDefault.default.oneOf([
+        'elevation',
+        'outlined'
+    ])
+};
+exports.default = _withStylesDefault.default(styles, {
+    name: 'MuiPaper'
+})(Paper);
+
+},{"@babel/runtime/helpers/esm/objectWithoutProperties":"5UtKX","@babel/runtime/helpers/esm/extends":"5qnVv","react":"3b2NM","prop-types":"4dfy5","clsx":"29lTl","@material-ui/utils":"11kc7","../styles/withStyles":"4q1Sj","@parcel/transformer-js/src/esmodule-helpers.js":"367CR"}],"1bjjB":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>_cardActionsDefault.default
+);
+var _cardActions = require("./CardActions");
+var _cardActionsDefault = parcelHelpers.interopDefault(_cardActions);
+
+},{"./CardActions":"30hir","@parcel/transformer-js/src/esmodule-helpers.js":"367CR"}],"30hir":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "styles", ()=>styles
+);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _objectWithoutProperties = require("@babel/runtime/helpers/esm/objectWithoutProperties");
+var _objectWithoutPropertiesDefault = parcelHelpers.interopDefault(_objectWithoutProperties);
+var _react = require("react");
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _clsx = require("clsx");
+var _clsxDefault = parcelHelpers.interopDefault(_clsx);
+var _withStyles = require("../styles/withStyles");
+var _withStylesDefault = parcelHelpers.interopDefault(_withStyles);
+var styles = {
+    /* Styles applied to the root element. */ root: {
+        display: 'flex',
+        alignItems: 'center',
+        padding: 8
+    },
+    /* Styles applied to the root element if `disableSpacing={false}`. */ spacing: {
+        '& > :not(:first-child)': {
+            marginLeft: 8
+        }
+    }
+};
+var CardActions = /*#__PURE__*/ _react.forwardRef(function CardActions1(props, ref) {
+    var _props$disableSpacing = props.disableSpacing, disableSpacing = _props$disableSpacing === void 0 ? false : _props$disableSpacing, classes = props.classes, className = props.className, other = _objectWithoutPropertiesDefault.default(props, [
+        "disableSpacing",
+        "classes",
+        "className"
+    ]);
+    return(/*#__PURE__*/ _react.createElement("div", _extendsDefault.default({
+        className: _clsxDefault.default(classes.root, className, !disableSpacing && classes.spacing),
+        ref: ref
+    }, other)));
+});
+CardActions.propTypes = {
+    // ----------------------------- Warning --------------------------------
+    // | These PropTypes are generated from the TypeScript type definitions |
+    // |     To update them edit the d.ts file and run "yarn proptypes"     |
+    // ----------------------------------------------------------------------
+    /**
+   * The content of the component.
+   */ children: _propTypesDefault.default.node,
+    /**
+   * Override or extend the styles applied to the component.
+   * See [CSS API](#css) below for more details.
+   */ classes: _propTypesDefault.default.object,
+    /**
+   * @ignore
+   */ className: _propTypesDefault.default.string,
+    /**
+   * If `true`, the actions do not have additional margin.
+   */ disableSpacing: _propTypesDefault.default.bool
+};
+exports.default = _withStylesDefault.default(styles, {
+    name: 'MuiCardActions'
+})(CardActions);
+
+},{"@babel/runtime/helpers/esm/extends":"5qnVv","@babel/runtime/helpers/esm/objectWithoutProperties":"5UtKX","react":"3b2NM","prop-types":"4dfy5","clsx":"29lTl","../styles/withStyles":"4q1Sj","@parcel/transformer-js/src/esmodule-helpers.js":"367CR"}],"VtMKY":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>_cardContentDefault.default
+);
+var _cardContent = require("./CardContent");
+var _cardContentDefault = parcelHelpers.interopDefault(_cardContent);
+
+},{"./CardContent":"5LM7p","@parcel/transformer-js/src/esmodule-helpers.js":"367CR"}],"5LM7p":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "styles", ()=>styles
+);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _objectWithoutProperties = require("@babel/runtime/helpers/esm/objectWithoutProperties");
+var _objectWithoutPropertiesDefault = parcelHelpers.interopDefault(_objectWithoutProperties);
+var _react = require("react");
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _clsx = require("clsx");
+var _clsxDefault = parcelHelpers.interopDefault(_clsx);
+var _withStyles = require("../styles/withStyles");
+var _withStylesDefault = parcelHelpers.interopDefault(_withStyles);
+var styles = {
+    /* Styles applied to the root element. */ root: {
+        padding: 16,
+        '&:last-child': {
+            paddingBottom: 24
+        }
+    }
+};
+var CardContent = /*#__PURE__*/ _react.forwardRef(function CardContent1(props, ref) {
+    var classes = props.classes, className = props.className, _props$component = props.component, Component = _props$component === void 0 ? 'div' : _props$component, other = _objectWithoutPropertiesDefault.default(props, [
+        "classes",
+        "className",
+        "component"
+    ]);
+    return(/*#__PURE__*/ _react.createElement(Component, _extendsDefault.default({
+        className: _clsxDefault.default(classes.root, className),
+        ref: ref
+    }, other)));
+});
+CardContent.propTypes = {
+    // ----------------------------- Warning --------------------------------
+    // | These PropTypes are generated from the TypeScript type definitions |
+    // |     To update them edit the d.ts file and run "yarn proptypes"     |
+    // ----------------------------------------------------------------------
+    /**
+   * The content of the component.
+   */ children: _propTypesDefault.default.node,
+    /**
+   * Override or extend the styles applied to the component.
+   * See [CSS API](#css) below for more details.
+   */ classes: _propTypesDefault.default.object,
+    /**
+   * @ignore
+   */ className: _propTypesDefault.default.string,
+    /**
+   * The component used for the root node.
+   * Either a string to use a HTML element or a component.
+   */ component: _propTypesDefault.default/* @typescript-to-proptypes-ignore */ .elementType
+};
+exports.default = _withStylesDefault.default(styles, {
+    name: 'MuiCardContent'
+})(CardContent);
+
+},{"@babel/runtime/helpers/esm/extends":"5qnVv","@babel/runtime/helpers/esm/objectWithoutProperties":"5UtKX","react":"3b2NM","prop-types":"4dfy5","clsx":"29lTl","../styles/withStyles":"4q1Sj","@parcel/transformer-js/src/esmodule-helpers.js":"367CR"}],"3wcF9":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>_typographyDefault.default
+);
+var _typography = require("./Typography");
+var _typographyDefault = parcelHelpers.interopDefault(_typography);
+
+},{"./Typography":"499gC","@parcel/transformer-js/src/esmodule-helpers.js":"367CR"}],"499gC":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "styles", ()=>styles
+);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _objectWithoutProperties = require("@babel/runtime/helpers/esm/objectWithoutProperties");
+var _objectWithoutPropertiesDefault = parcelHelpers.interopDefault(_objectWithoutProperties);
+var _react = require("react");
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _clsx = require("clsx");
+var _clsxDefault = parcelHelpers.interopDefault(_clsx);
+var _withStyles = require("../styles/withStyles");
+var _withStylesDefault = parcelHelpers.interopDefault(_withStyles);
+var _capitalize = require("../utils/capitalize");
+var _capitalizeDefault = parcelHelpers.interopDefault(_capitalize);
+var styles = function styles1(theme) {
+    return {
+        /* Styles applied to the root element. */ root: {
+            margin: 0
+        },
+        /* Styles applied to the root element if `variant="body2"`. */ body2: theme.typography.body2,
+        /* Styles applied to the root element if `variant="body1"`. */ body1: theme.typography.body1,
+        /* Styles applied to the root element if `variant="caption"`. */ caption: theme.typography.caption,
+        /* Styles applied to the root element if `variant="button"`. */ button: theme.typography.button,
+        /* Styles applied to the root element if `variant="h1"`. */ h1: theme.typography.h1,
+        /* Styles applied to the root element if `variant="h2"`. */ h2: theme.typography.h2,
+        /* Styles applied to the root element if `variant="h3"`. */ h3: theme.typography.h3,
+        /* Styles applied to the root element if `variant="h4"`. */ h4: theme.typography.h4,
+        /* Styles applied to the root element if `variant="h5"`. */ h5: theme.typography.h5,
+        /* Styles applied to the root element if `variant="h6"`. */ h6: theme.typography.h6,
+        /* Styles applied to the root element if `variant="subtitle1"`. */ subtitle1: theme.typography.subtitle1,
+        /* Styles applied to the root element if `variant="subtitle2"`. */ subtitle2: theme.typography.subtitle2,
+        /* Styles applied to the root element if `variant="overline"`. */ overline: theme.typography.overline,
+        /* Styles applied to the root element if `variant="srOnly"`. Only accessible to screen readers. */ srOnly: {
+            position: 'absolute',
+            height: 1,
+            width: 1,
+            overflow: 'hidden'
+        },
+        /* Styles applied to the root element if `align="left"`. */ alignLeft: {
+            textAlign: 'left'
+        },
+        /* Styles applied to the root element if `align="center"`. */ alignCenter: {
+            textAlign: 'center'
+        },
+        /* Styles applied to the root element if `align="right"`. */ alignRight: {
+            textAlign: 'right'
+        },
+        /* Styles applied to the root element if `align="justify"`. */ alignJustify: {
+            textAlign: 'justify'
+        },
+        /* Styles applied to the root element if `nowrap={true}`. */ noWrap: {
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+            whiteSpace: 'nowrap'
+        },
+        /* Styles applied to the root element if `gutterBottom={true}`. */ gutterBottom: {
+            marginBottom: '0.35em'
+        },
+        /* Styles applied to the root element if `paragraph={true}`. */ paragraph: {
+            marginBottom: 16
+        },
+        /* Styles applied to the root element if `color="inherit"`. */ colorInherit: {
+            color: 'inherit'
+        },
+        /* Styles applied to the root element if `color="primary"`. */ colorPrimary: {
+            color: theme.palette.primary.main
+        },
+        /* Styles applied to the root element if `color="secondary"`. */ colorSecondary: {
+            color: theme.palette.secondary.main
+        },
+        /* Styles applied to the root element if `color="textPrimary"`. */ colorTextPrimary: {
+            color: theme.palette.text.primary
+        },
+        /* Styles applied to the root element if `color="textSecondary"`. */ colorTextSecondary: {
+            color: theme.palette.text.secondary
+        },
+        /* Styles applied to the root element if `color="error"`. */ colorError: {
+            color: theme.palette.error.main
+        },
+        /* Styles applied to the root element if `display="inline"`. */ displayInline: {
+            display: 'inline'
+        },
+        /* Styles applied to the root element if `display="block"`. */ displayBlock: {
+            display: 'block'
+        }
+    };
+};
+var defaultVariantMapping = {
+    h1: 'h1',
+    h2: 'h2',
+    h3: 'h3',
+    h4: 'h4',
+    h5: 'h5',
+    h6: 'h6',
+    subtitle1: 'h6',
+    subtitle2: 'h6',
+    body1: 'p',
+    body2: 'p'
+};
+var Typography = /*#__PURE__*/ _react.forwardRef(function Typography1(props, ref) {
+    var _props$align = props.align, align = _props$align === void 0 ? 'inherit' : _props$align, classes = props.classes, className = props.className, _props$color = props.color, color = _props$color === void 0 ? 'initial' : _props$color, component = props.component, _props$display = props.display, display = _props$display === void 0 ? 'initial' : _props$display, _props$gutterBottom = props.gutterBottom, gutterBottom = _props$gutterBottom === void 0 ? false : _props$gutterBottom, _props$noWrap = props.noWrap, noWrap = _props$noWrap === void 0 ? false : _props$noWrap, _props$paragraph = props.paragraph, paragraph = _props$paragraph === void 0 ? false : _props$paragraph, _props$variant = props.variant, variant = _props$variant === void 0 ? 'body1' : _props$variant, _props$variantMapping = props.variantMapping, variantMapping = _props$variantMapping === void 0 ? defaultVariantMapping : _props$variantMapping, other = _objectWithoutPropertiesDefault.default(props, [
+        "align",
+        "classes",
+        "className",
+        "color",
+        "component",
+        "display",
+        "gutterBottom",
+        "noWrap",
+        "paragraph",
+        "variant",
+        "variantMapping"
+    ]);
+    var Component = component || (paragraph ? 'p' : variantMapping[variant] || defaultVariantMapping[variant]) || 'span';
+    return(/*#__PURE__*/ _react.createElement(Component, _extendsDefault.default({
+        className: _clsxDefault.default(classes.root, className, variant !== 'inherit' && classes[variant], color !== 'initial' && classes["color".concat(_capitalizeDefault.default(color))], noWrap && classes.noWrap, gutterBottom && classes.gutterBottom, paragraph && classes.paragraph, align !== 'inherit' && classes["align".concat(_capitalizeDefault.default(align))], display !== 'initial' && classes["display".concat(_capitalizeDefault.default(display))]),
+        ref: ref
+    }, other)));
+});
+Typography.propTypes = {
+    /**
+   * Set the text-align on the component.
+   */ align: _propTypesDefault.default.oneOf([
+        'inherit',
+        'left',
+        'center',
+        'right',
+        'justify'
+    ]),
+    /**
+   * The content of the component.
+   */ children: _propTypesDefault.default.node,
+    /**
+   * Override or extend the styles applied to the component.
+   * See [CSS API](#css) below for more details.
+   */ classes: _propTypesDefault.default.object.isRequired,
+    /**
+   * @ignore
+   */ className: _propTypesDefault.default.string,
+    /**
+   * The color of the component. It supports those theme colors that make sense for this component.
+   */ color: _propTypesDefault.default.oneOf([
+        'initial',
+        'inherit',
+        'primary',
+        'secondary',
+        'textPrimary',
+        'textSecondary',
+        'error'
+    ]),
+    /**
+   * The component used for the root node.
+   * Either a string to use a HTML element or a component.
+   * Overrides the behavior of the `variantMapping` prop.
+   */ component: _propTypesDefault.default/* @typescript-to-proptypes-ignore */ .elementType,
+    /**
+   * Controls the display type
+   */ display: _propTypesDefault.default.oneOf([
+        'initial',
+        'block',
+        'inline'
+    ]),
+    /**
+   * If `true`, the text will have a bottom margin.
+   */ gutterBottom: _propTypesDefault.default.bool,
+    /**
+   * If `true`, the text will not wrap, but instead will truncate with a text overflow ellipsis.
+   *
+   * Note that text overflow can only happen with block or inline-block level elements
+   * (the element needs to have a width in order to overflow).
+   */ noWrap: _propTypesDefault.default.bool,
+    /**
+   * If `true`, the text will have a bottom margin.
+   */ paragraph: _propTypesDefault.default.bool,
+    /**
+   * Applies the theme typography styles.
+   */ variant: _propTypesDefault.default.oneOf([
+        'h1',
+        'h2',
+        'h3',
+        'h4',
+        'h5',
+        'h6',
+        'subtitle1',
+        'subtitle2',
+        'body1',
+        'body2',
+        'caption',
+        'button',
+        'overline',
+        'srOnly',
+        'inherit'
+    ]),
+    /**
+   * The component maps the variant prop to a range of different HTML element types.
+   * For instance, subtitle1 to `<h6>`.
+   * If you wish to change that mapping, you can provide your own.
+   * Alternatively, you can use the `component` prop.
+   */ variantMapping: _propTypesDefault.default.object
+};
+exports.default = _withStylesDefault.default(styles, {
+    name: 'MuiTypography'
+})(Typography);
+
+},{"@babel/runtime/helpers/esm/extends":"5qnVv","@babel/runtime/helpers/esm/objectWithoutProperties":"5UtKX","react":"3b2NM","prop-types":"4dfy5","clsx":"29lTl","../styles/withStyles":"4q1Sj","../utils/capitalize":"59pJw","@parcel/transformer-js/src/esmodule-helpers.js":"367CR"}],"detPq":[function(require,module,exports) {
 var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -39395,110 +40469,7 @@ function getTransitionProps(props, options) {
     };
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"367CR"}],"5Fj22":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "default", ()=>_paperDefault.default
-);
-var _paper = require("./Paper");
-var _paperDefault = parcelHelpers.interopDefault(_paper);
-
-},{"./Paper":"73HmR","@parcel/transformer-js/src/esmodule-helpers.js":"367CR"}],"73HmR":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "styles", ()=>styles
-);
-var _objectWithoutProperties = require("@babel/runtime/helpers/esm/objectWithoutProperties");
-var _objectWithoutPropertiesDefault = parcelHelpers.interopDefault(_objectWithoutProperties);
-var _extends = require("@babel/runtime/helpers/esm/extends");
-var _extendsDefault = parcelHelpers.interopDefault(_extends);
-var _react = require("react");
-var _propTypes = require("prop-types");
-var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
-var _clsx = require("clsx");
-var _clsxDefault = parcelHelpers.interopDefault(_clsx);
-var _utils = require("@material-ui/utils");
-var _withStyles = require("../styles/withStyles");
-var _withStylesDefault = parcelHelpers.interopDefault(_withStyles);
-var styles = function styles1(theme) {
-    var elevations = {
-    };
-    theme.shadows.forEach(function(shadow, index) {
-        elevations["elevation".concat(index)] = {
-            boxShadow: shadow
-        };
-    });
-    return _extendsDefault.default({
-        /* Styles applied to the root element. */ root: {
-            backgroundColor: theme.palette.background.paper,
-            color: theme.palette.text.primary,
-            transition: theme.transitions.create('box-shadow')
-        },
-        /* Styles applied to the root element if `square={false}`. */ rounded: {
-            borderRadius: theme.shape.borderRadius
-        },
-        /* Styles applied to the root element if `variant="outlined"`. */ outlined: {
-            border: "1px solid ".concat(theme.palette.divider)
-        }
-    }, elevations);
-};
-var Paper = /*#__PURE__*/ _react.forwardRef(function Paper1(props, ref) {
-    var classes = props.classes, className = props.className, _props$component = props.component, Component = _props$component === void 0 ? 'div' : _props$component, _props$square = props.square, square = _props$square === void 0 ? false : _props$square, _props$elevation = props.elevation, elevation = _props$elevation === void 0 ? 1 : _props$elevation, _props$variant = props.variant, variant = _props$variant === void 0 ? 'elevation' : _props$variant, other = _objectWithoutPropertiesDefault.default(props, [
-        "classes",
-        "className",
-        "component",
-        "square",
-        "elevation",
-        "variant"
-    ]);
-    return(/*#__PURE__*/ _react.createElement(Component, _extendsDefault.default({
-        className: _clsxDefault.default(classes.root, className, variant === 'outlined' ? classes.outlined : classes["elevation".concat(elevation)], !square && classes.rounded),
-        ref: ref
-    }, other)));
-});
-Paper.propTypes = {
-    // ----------------------------- Warning --------------------------------
-    // | These PropTypes are generated from the TypeScript type definitions |
-    // |     To update them edit the d.ts file and run "yarn proptypes"     |
-    // ----------------------------------------------------------------------
-    /**
-   * The content of the component.
-   */ children: _propTypesDefault.default.node,
-    /**
-   * Override or extend the styles applied to the component.
-   * See [CSS API](#css) below for more details.
-   */ classes: _propTypesDefault.default.object,
-    /**
-   * @ignore
-   */ className: _propTypesDefault.default.string,
-    /**
-   * The component used for the root node.
-   * Either a string to use a HTML element or a component.
-   */ component: _propTypesDefault.default/* @typescript-to-proptypes-ignore */ .elementType,
-    /**
-   * Shadow depth, corresponds to `dp` in the spec.
-   * It accepts values between 0 and 24 inclusive.
-   */ elevation: _utils.chainPropTypes(_propTypesDefault.default.number, function(props) {
-        var classes = props.classes, elevation = props.elevation; // in case `withStyles` fails to inject we don't need this warning
-        if (classes === undefined) return null;
-        if (elevation != null && classes["elevation".concat(elevation)] === undefined) return new Error("Material-UI: This elevation `".concat(elevation, "` is not implemented."));
-        return null;
-    }),
-    /**
-   * If `true`, rounded corners are disabled.
-   */ square: _propTypesDefault.default.bool,
-    /**
-   * The variant to use.
-   */ variant: _propTypesDefault.default.oneOf([
-        'elevation',
-        'outlined'
-    ])
-};
-exports.default = _withStylesDefault.default(styles, {
-    name: 'MuiPaper'
-})(Paper);
-
-},{"@babel/runtime/helpers/esm/objectWithoutProperties":"5UtKX","@babel/runtime/helpers/esm/extends":"5qnVv","react":"3b2NM","prop-types":"4dfy5","clsx":"29lTl","@material-ui/utils":"11kc7","../styles/withStyles":"4q1Sj","@parcel/transformer-js/src/esmodule-helpers.js":"367CR"}],"4RwcA":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"367CR"}],"4RwcA":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>_menuListDefault.default
