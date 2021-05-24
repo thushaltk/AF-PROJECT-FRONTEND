@@ -52,6 +52,7 @@
   opacity: 0.9;
   border: 0;
   margin: 0;
+  
 }
 
 .custom-header li.dropdown .dropdown-toggle:focus,
@@ -98,6 +99,16 @@ img.dropdown-image {
 .custom-header .dropdown ul li.active a {
   color: #e9ac09 !important;
 }
+
+.banner {
+    background-color: #f7f8fa;
+    text-align: center;
+  }
+  
+  .content-wrapper {
+    padding: 27px 0px;
+  }
+
 
 .footer-clean {
     padding: 50px 0;
@@ -197,4 +208,16 @@ img.dropdown-image {
   }
 
   
+.anim{
+    animation: animate 1s normal;
+}
+
+@keyframes animate {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 /*# sourceMappingURL=index.40623f9b.css.map */

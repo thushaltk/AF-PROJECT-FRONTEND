@@ -4,11 +4,11 @@ import './Header.css';
 
 const Header = () => {
   return (
-    <nav style={{padding: "30px 10px", width: "100%"}} className="navbar navbar-light navbar-expand-md custom-header">
+    <nav style={{padding: "20px 10px", width: "100%"}} className="navbar navbar-light navbar-expand-md custom-header">
       <div className="container-fluid">
         <div>
           <a className="navbar-brand" href="#">
-            ICAF
+            ICAF2021
           </a>
           <button
             data-toggle="collapse"
@@ -113,7 +113,7 @@ const Header = () => {
                 data-toggle="dropdown"
                 href="#"
               >
-                <i className="icon ion-social-instagram" />
+                <i style={{fontSize: "30px"}} className="icon ion-android-contacts" />
               </a>
               <div className="dropdown-menu dropdown-menu-right">
                 <a className="dropdown-item" href="#">

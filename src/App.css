@@ -1,0 +1,12 @@
+.anim{
+    animation: animate 1s normal;
+}
+
+@keyframes animate {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

@@ -3061,6 +3061,8 @@ input[type="submit"].btn-block {
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 1rem;
+  
+  
 }
 .dropdown-menu-left {
   right: auto;
@@ -3068,7 +3070,8 @@ input[type="submit"].btn-block {
 }
 .dropdown-menu-right {
   right: 0;
-  left: auto;
+  left: auto; 
+  
 }
 @media (min-width: 576px) {
   .dropdown-menu-sm-left {
@@ -3115,6 +3118,7 @@ input[type="submit"].btn-block {
   bottom: 100%;
   margin-top: 0;
   margin-bottom: 0.125rem;
+  
 }
 .dropup .dropdown-toggle::after {
   display: inline-block;
@@ -3230,6 +3234,7 @@ input[type="submit"].btn-block {
 }
 .dropdown-menu.show {
   display: block;
+  
 }
 .dropdown-header {
   display: block;

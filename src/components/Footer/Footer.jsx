@@ -1,10 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
+
+import validator from 'validator';
 
 import "./Footer.css";
 
 const Footer = () => {
+  const [isEmailInvalid, setisEmailInvalid] = useState(false);
+  const [helperText, setHelperText] = useState("");
+
+  const isEmailInvalidHandler = (event) => {
+    if(validator.isEmail(event.target.value)){
+      setisEmailInvalid(false);
+      setHelperText("");
+    }else{
+      setisEmailInvalid(true);
+      setHelperText("Oops....Check spellings again!");
+    }
+  }
+
   return (
     <footer className="footer-clean">
       <div className="container">
@@ -44,10 +59,13 @@ const Footer = () => {
               <strong>SUBSCRIBE</strong>
             </p>
             <TextField
+              error={isEmailInvalid}
+              helperText={helperText}
               type="email"
               className="mat-subscribe"
               id="filled-basic"
               label="Enter Email"
+              onChange={isEmailInvalidHandler}
               variant="filled"
             />
           </div>
