@@ -10,7 +10,8 @@ const Header = () => {
           <a className="navbar-brand" href="#">
             ICAF2021
           </a>
-          <button
+        </div>
+        <button
             data-toggle="collapse"
             className="navbar-toggler"
             data-target="#navbar-collapse"
@@ -18,7 +19,6 @@ const Header = () => {
             <span className="sr-only">Toggle navigation</span>
             <span className="navbar-toggler-icon" />
           </button>
-        </div>
         <div className="collapse navbar-collapse" id="navbar-collapse">
           <ul className="navbar-nav links">
             <li className="nav-item">
