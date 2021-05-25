@@ -11,13 +11,17 @@ const Header = (props) => {
     history.push("/admin-login");
   }
 
+  const userRegistrationNavigator = () => {
+    history.push("/new-user");
+  }
+
   return (
     <nav style={{padding: "20px 10px", width: "100%"}} className="navbar navbar-light navbar-expand-md custom-header">
       <div className="container-fluid">
         <div>
-          <a className="navbar-brand" href="#">
+          <Link className="navbar-brand" to="/">
             ICAF2021
-          </a>
+          </Link>
         </div>
         <button
             data-toggle="collapse"
@@ -133,6 +137,9 @@ const Header = (props) => {
                 <a className="dropdown-item" href="#">
                   Editor Login
                 </a>
+                <button className="dropdown-item" onClick={userRegistrationNavigator}>
+                  User Registration
+                </button>
               </div>
             </li>
           </ul>

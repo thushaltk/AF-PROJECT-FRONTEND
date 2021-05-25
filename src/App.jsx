@@ -10,6 +10,8 @@ import Loading from "./components/LandingPage/Loading";
 import AdminLogin from "./components/Login/AdminLogin/AdminLogin";
 
 import * as WorldLoading from '../public/world-loading.json';
+import AdminDashboard from "./components/Admin/AdminDashboard";
+import Register from "./components/User/Register";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -32,8 +34,14 @@ const App = () => {
           <Route exact path="/">
             <LandingPage />
           </Route>
-          <Route exact path="/admin-login">
+          <Route path="/admin-login">
             <AdminLogin />
+          </Route>
+          <Route path="/admin/admin-dashboard">
+            <AdminDashboard />
+          </Route>
+          <Route path="/new-user">
+            <Register />
           </Route>
         </Switch>
 

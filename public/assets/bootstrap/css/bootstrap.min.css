@@ -3057,7 +3057,7 @@ input[type="submit"].btn-block {
   color: #212529;
   text-align: left;
   list-style: none;
-  background-color: #2196F3;
+  background-color: #3F51B5;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 1rem;
@@ -4036,7 +4036,7 @@ input[type="submit"].btn-block {
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #fff;
-  background-color: #007bff;
+  background-color: #3F51B5;
 }
 .nav-fill .nav-item,
 .nav-fill > .nav-link {
@@ -4415,7 +4415,7 @@ input[type="submit"].btn-block {
 }
 .navbar-light .navbar-nav .nav-link:focus,
 .navbar-light .navbar-nav .nav-link:hover {
-  color: #2196F3;
+  color: #3F51B5;
 
 }
 .navbar-light .navbar-nav .nav-link.disabled {

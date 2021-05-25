@@ -10,6 +10,7 @@ import * as VideoConf from "../../../public/59500-video-conferance-gif.json";
 import "./LandingPage.css";
 import "aos/dist/aos.css";
 import Loading from "./Loading";
+import Speakers from "./Speakers/Speakers";
 
 const LandingPage = () => {
   useEffect(() => {
@@ -19,7 +20,7 @@ const LandingPage = () => {
   return (
     <div className="landing-anim">
       <div className="banner">
-        <div className="container">
+        <div className="load-anim container">
           <br />
           <br />
           <br />
@@ -27,8 +28,7 @@ const LandingPage = () => {
             INTERNATIONAL CONFERENCE ON APPLICATION FRAMEWORKS 2021
           </h1>
           <h6 className="font-weight-normal text-muted pb-3">
-            Simple is a simple template with a creative design that solves all
-            your marketing and SEO queries.
+            Welcome to the International Conference on Application Frameworks ICAF 2021 Sri Lanka.
           </h6>
           <div>
             <Button variant="contained" color="primary">
@@ -101,6 +101,7 @@ const LandingPage = () => {
         </div>
         <br />
       </div>
+      <Speakers/>
     </div>
   );
 };

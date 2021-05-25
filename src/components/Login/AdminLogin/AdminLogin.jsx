@@ -6,8 +6,15 @@ import * as LoginLoading from "../../../../public/53395-login.json";
 
 import "./AdminLogin.css";
 import Loading from "../../LandingPage/Loading";
+import { useHistory } from "react-router";
 
 const AdminLogin = (props) => {
+  let history = useHistory();
+
+  const login = () => {
+    history.push("/admin/admin-dashboard");
+  }
+
   return (
     <div className="row login-clean">
       <div className="col col-sm-1"></div>
@@ -20,11 +27,9 @@ const AdminLogin = (props) => {
           />
       </div>
       <div className="col col-sm-6">
-        <form method="post" style={{width: "100%"}} className="login-anim">
-          <h2 className="sr-only">Login Form</h2>
-          <div className="illustration">
-            <i className="icon ion-ios-navigate" />
-          </div>
+        <form method="post" style={{width: "100%", alignItems: "center"}} className="login-anim">
+            <div className="admin-login-dp"></div>
+            <br/>
           <div className="form-group">
             <TextField
               className="form-control"
@@ -48,6 +53,7 @@ const AdminLogin = (props) => {
               type="submit"
               variant="contained"
               color="primary"
+              onClick={login}
             >
               Log In
             </Button>

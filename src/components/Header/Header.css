@@ -35,7 +35,7 @@
   border-radius: 2px;
   font-size: 11px;
   color: #fff;
-  background-color: #2a6a92;
+  background-color: #3F51B5;
   padding: 2px 4px;
   font-weight: normal;
 }
@@ -58,7 +58,7 @@
 .custom-header li.dropdown .dropdown-toggle:focus,
 .custom-header li.dropdown .dropdown-toggle:hover,
 .custom-header li.dropdown .dropdown-toggle:active {
-  color: #2196F3;
+  color: #3F51B5;
 }
 
 .custom-header ul.nav.navbar-nav.navbar-right .dropdown li a {
