@@ -2,13 +2,14 @@ import React, { useEffect } from "react";
 
 import Aos from "aos";
 import Button from "@material-ui/core/Button";
-import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
+import * as VideoConf from "../../../public/59500-video-conferance-gif.json";
 
 import "./LandingPage.css";
 import "aos/dist/aos.css";
+import Loading from "./Loading";
 
 const LandingPage = () => {
   useEffect(() => {
@@ -16,7 +17,7 @@ const LandingPage = () => {
   });
 
   return (
-    <div>
+    <div className="landing-anim">
       <div className="banner">
         <div className="container">
           <br />
@@ -35,11 +36,14 @@ const LandingPage = () => {
             </Button>
           </div>
           <br />
-          <img
-            src="https://inbo.ir/wp-content/uploads/2020/09/online_instagram_1-min-1200x675.jpg"
-            alt=""
-            className="img img-fluid"
-          />
+          <div style={{ width: "100%" }}>
+            <Loading
+              setContent={VideoConf}
+              loop={true}
+              height={500}
+              width={600}
+            />
+          </div>
         </div>
         <br />
         <br />

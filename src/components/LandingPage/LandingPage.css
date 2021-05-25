@@ -1,5 +1,6 @@
 .banner {
-  background-color: #f7f8fa;
+  background-image: url(../../../public/assets/bg.png);
+  background-size: contain;
   text-align: center;
 }
 
@@ -79,3 +80,4 @@ body a {
   width: 100%;
   align-content: center;
 }
+

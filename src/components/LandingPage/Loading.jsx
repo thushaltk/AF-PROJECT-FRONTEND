@@ -1,25 +1,25 @@
 import React from 'react';
 
 import Lottie from 'react-lottie';
-import * as WorldLoading from '../../../public/world-loading.json';
 
-const defaultOptions = {
-    loop: false,
-    autoplay: true,
-    animationData: WorldLoading,
-    rendererSettings:{
-        preserveAspectRatio : 'xMidYMid slice'
-    }
-};
 
-const Loading = () => {
+const Loading = (props) => {
+    var defaultOptions = {
+        loop: props.loop,
+        autoplay: true,
+        animationData: props.setContent,
+        rendererSettings:{
+            preserveAspectRatio : 'xMidYMid slice'
+        }
+    };
+    
     return ( 
         <>
         <br/><br />
             <Lottie
                 options={defaultOptions}
-                height={400}
-                width={400}
+                height={props.height}
+                width={props.width}
             />
         </>
      );

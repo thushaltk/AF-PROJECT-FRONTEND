@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
+import { useHistory } from "react-router";
+import { Link } from "react-router-dom";
 
 import './Header.css';
 
-const Header = () => {
+const Header = (props) => {
+  let history = useHistory();
+
+  const sendAdminLoginTrigger = () => {
+    history.push("/admin-login");
+  }
+
   return (
     <nav style={{padding: "20px 10px", width: "100%"}} className="navbar navbar-light navbar-expand-md custom-header">
       <div className="container-fluid">
@@ -22,9 +30,9 @@ const Header = () => {
         <div className="collapse navbar-collapse" id="navbar-collapse">
           <ul className="navbar-nav links">
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="/">
                 Home{" "}
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
@@ -116,9 +124,9 @@ const Header = () => {
                 <i style={{fontSize: "30px"}} className="icon ion-android-contacts" />
               </a>
               <div className="dropdown-menu dropdown-menu-right">
-                <a className="dropdown-item" href="#">
+                <button className="dropdown-item" onClick={sendAdminLoginTrigger}>
                   Admin Login
-                </a>
+                </button>
                 <a className="dropdown-item" href="#">
                   Reviewer Login
                 </a>
