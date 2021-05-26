@@ -8,6 +8,7 @@ import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import { Button } from "@material-ui/core";
 
+
 const ResearcherRegForm = (props) => {
   const [open, setOpen] = useState(props.open);
   const [enteredFullName, setEnteredFullName] = useState("");
@@ -51,7 +52,9 @@ const ResearcherRegForm = (props) => {
 
     console.log(formData);
     
+    
   }
+
 
   return (
     <Dialog
