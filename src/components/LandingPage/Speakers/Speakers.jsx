@@ -21,7 +21,7 @@ const Speakers = () => {
         <div className="row people">
           <div data-aos="fade-right" className="col-md-6 col-lg-4 item">
             <img className="rounded-circle speakers-pic"/>
-            <h3 className="name">Ben Johnson</h3>
+            <h3 className="name">Kishen Deemud</h3>
             <p className="title">Musician</p>
             <p className="description">
               Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus.
@@ -43,7 +43,7 @@ const Speakers = () => {
           </div>
           <div data-aos="fade-up" className="col-md-6 col-lg-4 item">
             <img className="rounded-circle speakers-pic"/>
-            <h3 className="name">Emily Clark</h3>
+            <h3 className="name">Thushal T K</h3>
             <p className="title">Artist</p>
             <p className="description">
               Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus.
@@ -65,7 +65,7 @@ const Speakers = () => {
           </div>
           <div data-aos="fade-left" className="col-md-6 col-lg-4 item">
             <img className="rounded-circle speakers-pic"/>
-            <h3 className="name">Carl Kent</h3>
+            <h3 className="name">Eishan Dinuka</h3>
             <p className="title">Stylist</p>
             <p className="description">
               Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus.
