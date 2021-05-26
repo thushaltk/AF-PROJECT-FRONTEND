@@ -15,6 +15,10 @@ const Header = (props) => {
     history.push("/new-user");
   }
 
+  const userLoginNavigator = () => {
+    history.push("/user-login");
+  }
+
   return (
     <nav style={{padding: "20px 10px", width: "100%"}} className="navbar navbar-light navbar-expand-md custom-header">
       <div className="container-fluid">
@@ -138,6 +142,9 @@ const Header = (props) => {
                 </a>
                 <button className="dropdown-item" onClick={userRegistrationNavigator}>
                   User Registration
+                </button>
+                <button className="dropdown-item" onClick={userLoginNavigator}>
+                  User Login
                 </button>
               </div>
             </li>
