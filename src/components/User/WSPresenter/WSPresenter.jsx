@@ -53,7 +53,7 @@ const WSPresenter = (props) => {
       onClose={handleClose}
       aria-labelledby="form-dialog-title"
     >
-      <DialogTitle id="form-dialog-title">Welcome. Want to be a Workshop Presenter? Register below.</DialogTitle>
+      <DialogTitle id="form-dialog-title" style={{textAlign: "center"}}>Welcome. Want to be a Workshop Presenter? Register below.</DialogTitle>
       <form onSubmit={formHandler} method="POST">
       <DialogContent>
         <DialogContentText>

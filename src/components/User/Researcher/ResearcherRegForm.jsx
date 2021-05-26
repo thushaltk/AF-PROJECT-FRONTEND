@@ -14,6 +14,8 @@ const ResearcherRegForm = (props) => {
   const [enteredAddress, setEnteredAddress] = useState("");
   const [enteredEmail, setEnteredEmail] = useState("");
   const [enteredMobileNo, setEnteredMobileNo] = useState("");
+  const [uploadedFile, setUploadedFile] = useState();
+
 
   const handleClose = () => {
     setOpen(false);
@@ -32,6 +34,9 @@ const ResearcherRegForm = (props) => {
   const mobileNoHandler = (event) => {
     setEnteredMobileNo(event.target.value);
   }
+  const fileUploadHandler = (event) => {
+    setUploadedFile(event.target.files[0]);
+  }
 
   const formHandler = () => {
     handleClose();
@@ -40,7 +45,8 @@ const ResearcherRegForm = (props) => {
         fullName: enteredFullName,
         address: enteredAddress,
         email: enteredEmail,
-        mobileNo: enteredMobileNo
+        mobileNo: enteredMobileNo,
+        file: uploadedFile
     }
 
     console.log(formData);
@@ -53,7 +59,7 @@ const ResearcherRegForm = (props) => {
       onClose={handleClose}
       aria-labelledby="form-dialog-title"
     >
-      <DialogTitle id="form-dialog-title">Welcome. Want to be a Researcher? Register below.</DialogTitle>
+      <DialogTitle id="form-dialog-title" style={{textAlign: "center"}}>Welcome. Want to be a Researcher? Register below.</DialogTitle>
       <form onSubmit={formHandler} method="POST">
       <DialogContent>
         <DialogContentText>
@@ -92,6 +98,15 @@ const ResearcherRegForm = (props) => {
             type="number"
             fullWidth
             onChange={mobileNoHandler}
+          />
+          <br/><br/>
+          <h6>Upload Research Paper</h6>
+          <TextField
+            margin="dense"
+            id="researchPaper"
+            type="file"
+            fullWidth
+            onChange={fileUploadHandler}
           />
         
       </DialogContent>

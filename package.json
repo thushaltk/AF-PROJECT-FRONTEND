@@ -29,6 +29,7 @@
     "react-lottie": "^1.2.3",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
+    "react-stripe-checkout": "^2.6.3",
     "validator": "^13.6.0"
   }
 }
