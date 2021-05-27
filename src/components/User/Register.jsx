@@ -37,14 +37,10 @@ const Register = () => {
   const [clickedResearcher, isClickedResearcher] = useState(false);
   const [clickedPresenter, isClickedPresenter] = useState(false);
   const [clickedAttendee, isClickedAttendee] = useState(false);
-  const [rstateResponse, setResponse] = useState(
-    localStorage.getItem("ResearcherResponse") ? true : false
-  );
+  const [rstateResponse, setResponse] = useState(false);
   const [processPayment, setProcessPayment] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
-  const [attendeeResponse, setAttendeeResponse] = useState(
-    localStorage.getItem("AttendeeResponse") ? true : false
-  );
+  const [attendeeResponse, setAttendeeResponse] = useState(false);
   const [attendeePayment, setAttendeePayment] = useState(false);
   const [attendeeAlert, setAttendeeAlert] = useState(false);
 
@@ -71,8 +67,7 @@ const Register = () => {
 
     setTimeout(() => {
       const response = StripePaymentService.isPaymentDone().isDone;
-      console.log(response); //response :)
-      localStorage.setItem("ResearcherResponse", response);
+      console.log(response); 
       setResponse(response);
       setProcessPayment(true);
     }, 1000);
@@ -92,8 +87,7 @@ const Register = () => {
 
     setTimeout(() => {
       const response = StripePaymentService.isPaymentDone().isDone;
-      console.log(response); //response :)
-      localStorage.setItem("AttendeeResponse", response);
+      console.log(response); 
       setAttendeeResponse(response);
       setAttendeePayment(true);
     }, 1000);

@@ -85,6 +85,28 @@ const Speakers = () => {
               </a>
             </div>
           </div>
+          <div style={{margin: "0 auto"}} data-aos="fade-up" className="col-md-6 col-lg-4 item">
+            <img className="rounded-circle speakers-pic"/>
+            <h3 className="name">Rusira Liyanage</h3>
+            <p className="title">Stylist</p>
+            <p className="description">
+              Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus.
+              Praesent aliquam in tellus eu gravida. Aliquam varius finibus est,
+              et interdum justo suscipit id. Etiam dictum feugiat tellus, a
+              semper massa.{" "}
+            </p>
+            <div className="social">
+              <a href="#">
+                <i className="fa fa-facebook-official" />
+              </a>
+              <a href="#">
+                <i className="fa fa-twitter" />
+              </a>
+              <a href="#">
+                <i className="fa fa-instagram" />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
