@@ -37,12 +37,16 @@ const Register = () => {
   const [clickedResearcher, isClickedResearcher] = useState(false);
   const [clickedPresenter, isClickedPresenter] = useState(false);
   const [clickedAttendee, isClickedAttendee] = useState(false);
+  
   const [rstateResponse, setResponse] = useState(false);
   const [processPayment, setProcessPayment] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
+  const [showErrorAlert, setShowErrorAlert] = useState(false);
+  
   const [attendeeResponse, setAttendeeResponse] = useState(false);
   const [attendeePayment, setAttendeePayment] = useState(false);
   const [attendeeAlert, setAttendeeAlert] = useState(false);
+  const [showAttendeeErrorAlert, setAttendeeShowErrorAlert] = useState(false);
 
   const researcherHandler = () => {
     isClickedResearcher(true);
@@ -63,42 +67,59 @@ const Register = () => {
 
   const researcherTokenHandler = (token) => {
     console.log(token);
-    StripePaymentService.handleToken(100, token);
 
-    setTimeout(() => {
-      const response = StripePaymentService.isPaymentDone().isDone;
-      console.log(response); 
-      setResponse(response);
-      setProcessPayment(true);
-    }, 1000);
-
-    setTimeout(() => {
-      setProcessPayment(false);
-    }, 2000);
-
-    setTimeout(() => {
-      setShowAlert(true);
-    }, 2500);
-  };
+    StripePaymentService.handleToken(100, token).then(res => {
+      console.log(res);
+      setTimeout(() => {
+        setResponse(res);
+        if(res === true){
+          setProcessPayment(true);
+          setTimeout(() => {
+            setProcessPayment(false);
+          }, 500);
+          setTimeout(() => {
+            setShowAlert(true);
+            setAttendeeShowErrorAlert(false);
+          }, 800);
+        }else{
+          setTimeout(() => {
+            setShowAlert(false);
+            setShowErrorAlert(true);
+            setProcessPayment(false);
+          }, 800);
+        }
+      }, 1000);
+    });
+  }
 
   const attendeeTokenHandler = (token) => {
     console.log(token);
-    StripePaymentService.handleToken(15, token);
+    
+    StripePaymentService.handleToken(15, token).then(res => {
+      console.log(res);
+      setTimeout(() => {
+        setAttendeeResponse(res);
+        if(res === true){
+          setAttendeePayment(true);
+          setTimeout(() => {
+            setAttendeePayment(false);
+          }, 500);
+          setTimeout(() => {
+            setAttendeeAlert(true);
+            setAttendeeShowErrorAlert(false);
+          }, 800);
+        }else{
+          setTimeout(() => {
+            setAttendeeAlert(false);
+            setAttendeeShowErrorAlert(true);
+            setAttendeePayment(false);
+          }, 800);
+        }
+      }, 1000);
+    });
 
-    setTimeout(() => {
-      const response = StripePaymentService.isPaymentDone().isDone;
-      console.log(response); 
-      setAttendeeResponse(response);
-      setAttendeePayment(true);
-    }, 1000);
 
-    setTimeout(() => {
-      setAttendeePayment(false);
-    }, 2000);
 
-    setTimeout(() => {
-      setAttendeeAlert(true);
-    }, 2500);
   };
 
   return (
@@ -145,6 +166,9 @@ const Register = () => {
                 <Alert hidden={!showAlert} severity="success">
                   Payment Successful!!!
                 </Alert>
+                <Alert hidden={!showErrorAlert} severity="error">
+                  Payment Unsuccessful....Try again!....
+                </Alert>
               </Stripe>
             </div>
           </div>
@@ -189,6 +213,9 @@ const Register = () => {
                 <CircularProgress hidden={!attendeePayment} />
                 <Alert hidden={!attendeeAlert} severity="success">
                   Payment Successful!!!
+                </Alert>
+                <Alert hidden={!showAttendeeErrorAlert} severity="error">
+                  Payment Unsuccessful....Try again!....
                 </Alert>
               </Stripe>
             </div>

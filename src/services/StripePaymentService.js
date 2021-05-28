@@ -3,31 +3,31 @@ import axios from "axios";
 const PAYMENT_API_BASE_URL = "http://localhost:5000/api/researcher/pay";
 
 class StripePaymentService {
-    constructor(){
+    constructor() {
         this.paymentDone = {
             isDone: false
         };
     }
 
-    async handleToken(totalAmount, token){
-        try{
+    async handleToken(totalAmount, token) {
+        try {
             await axios.post(PAYMENT_API_BASE_URL, {
-                    token: token.id,
-                    amount: totalAmount
+                token: token.id,
+                amount: totalAmount
             });
             this.paymentDone = {
                 isDone: true
             };
-        } catch(error){
+            console.log(this.paymentDone.isDone);
+            return this.paymentDone.isDone;
+        } catch (error) {
             console.log(error);
             this.paymentDone = {
                 isDone: false
             };
+            console.log(this.paymentDone.isDone);
+            return this.paymentDone.isDone;
         };
-    }
-
-    isPaymentDone(){
-        return this.paymentDone;
     }
 }
 

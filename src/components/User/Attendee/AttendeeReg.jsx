@@ -7,6 +7,7 @@ import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import { Button } from "@material-ui/core";
+import AttendeeService from '../../../services/AttendeeService';
 
 const AttendeeReg = (props) => {
     const [open, setOpen] = useState(props.open);
@@ -40,8 +41,13 @@ const AttendeeReg = (props) => {
         fullName: enteredFullName,
         address: enteredAddress,
         email: enteredEmail,
-        mobileNo: enteredMobileNo
+        mobileNo: enteredMobileNo,
+        isPaid: true
     }
+
+    AttendeeService.sendAttendeeDetails(formData).then(res=>{
+      console.log("Data sent successfully");
+    });
 
     console.log(formData);
     
@@ -54,7 +60,7 @@ const AttendeeReg = (props) => {
       aria-labelledby="form-dialog-title"
     >
       <DialogTitle id="form-dialog-title" style={{textAlign: "center"}}>Welcome. Glad you're interested in our Conference. Register below.</DialogTitle>
-      <form onSubmit={formHandler} method="POST">
+      <form onSubmit={formHandler}>
       <DialogContent>
         <DialogContentText>
           To subscribe to this website, please enter your email address here. We
