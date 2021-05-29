@@ -88,7 +88,7 @@ const Register = () => {
             setProcessPayment(false);
           }, 800);
         }
-      }, 1000);
+      }, 500);
     });
   }
 

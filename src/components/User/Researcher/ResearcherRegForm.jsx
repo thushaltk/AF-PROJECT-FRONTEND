@@ -7,6 +7,7 @@ import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import { Button } from "@material-ui/core";
+import ResearcherService from "../../../services/ResearcherService";
 
 
 const ResearcherRegForm = (props) => {
@@ -15,7 +16,7 @@ const ResearcherRegForm = (props) => {
   const [enteredAddress, setEnteredAddress] = useState("");
   const [enteredEmail, setEnteredEmail] = useState("");
   const [enteredMobileNo, setEnteredMobileNo] = useState("");
-  const [uploadedFile, setUploadedFile] = useState();
+  const [uploadedFileLink, setUploadedFileLink] = useState("");
 
 
   const handleClose = () => {
@@ -36,10 +37,11 @@ const ResearcherRegForm = (props) => {
     setEnteredMobileNo(event.target.value);
   }
   const fileUploadHandler = (event) => {
-    setUploadedFile(event.target.files[0]);
+    setUploadedFileLink(event.target.value);
   }
 
-  const formHandler = () => {
+  const formHandler = (e) => {
+    e.preventDefault();
     handleClose();
 
     const formData = {
@@ -47,12 +49,11 @@ const ResearcherRegForm = (props) => {
         address: enteredAddress,
         email: enteredEmail,
         mobileNo: enteredMobileNo,
-        file: uploadedFile
+        isPaid: true,
+        researchPaperURL: uploadedFileLink
     }
-
     console.log(formData);
-    
-    
+    ResearcherService.sendResearcherDetails(formData);    
   }
 
 
@@ -63,7 +64,7 @@ const ResearcherRegForm = (props) => {
       aria-labelledby="form-dialog-title"
     >
       <DialogTitle id="form-dialog-title" style={{textAlign: "center"}}>Welcome. Want to be a Researcher? Register below.</DialogTitle>
-      <form onSubmit={formHandler} method="POST">
+      <form onSubmit={formHandler}>
       <DialogContent>
         <DialogContentText>
           To subscribe to this website, please enter your email address here. We
@@ -103,11 +104,11 @@ const ResearcherRegForm = (props) => {
             onChange={mobileNoHandler}
           />
           <br/><br/>
-          <h6>Upload Research Paper</h6>
+          <h6>Upload Research Paper Link (upload your reasearch paper to cloud storage and paste the link here)</h6>
           <TextField
             margin="dense"
             id="researchPaper"
-            type="file"
+            type="text"
             fullWidth
             onChange={fileUploadHandler}
           />

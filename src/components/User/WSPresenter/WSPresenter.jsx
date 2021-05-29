@@ -7,6 +7,7 @@ import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import { Button } from "@material-ui/core";
+import WSPresenterService from "../../../services/WSPresenterService";
 
 const WSPresenter = (props) => {
   const [open, setOpen] = useState(props.open);
@@ -14,6 +15,8 @@ const WSPresenter = (props) => {
   const [enteredAddress, setEnteredAddress] = useState("");
   const [enteredEmail, setEnteredEmail] = useState("");
   const [enteredMobileNo, setEnteredMobileNo] = useState("");
+  const [wsProposalLink, setWSProposalLink] = useState("");
+
 
   const handleClose = () => {
     setOpen(false);
@@ -32,6 +35,9 @@ const WSPresenter = (props) => {
   const mobileNoHandler = (event) => {
     setEnteredMobileNo(event.target.value);
   }
+  const proposalLinkHandler = (event) => {
+    setWSProposalLink(event.target.value);
+  }
 
   const formHandler = () => {
     handleClose();
@@ -40,10 +46,12 @@ const WSPresenter = (props) => {
         fullName: enteredFullName,
         address: enteredAddress,
         email: enteredEmail,
-        mobileNo: enteredMobileNo
+        mobileNo: enteredMobileNo,
+        wsProposalLink: wsProposalLink
     }
 
     console.log(formData);
+    WSPresenterService.sendWSPresenterDetails(formData);
     
   }
 
@@ -57,8 +65,9 @@ const WSPresenter = (props) => {
       <form onSubmit={formHandler} method="POST">
       <DialogContent>
         <DialogContentText>
-          To subscribe to this website, please enter your email address here. We
-          will send updates occasionally.
+          We are glad you to be a part of our conference. Welcome and we would like you publish your valuable
+          workshop proposal below. Make sure to upload your proposal to cloud storage (Google Drive, OneDrive, etc..)
+          and make it accessible to public. Then paste the link below. Enjoy the conference.
         </DialogContentText>
         
           <TextField
@@ -92,6 +101,15 @@ const WSPresenter = (props) => {
             type="number"
             fullWidth
             onChange={mobileNoHandler}
+          />
+          <br/><br/>
+          <h6>Upload Workshop Proposal Link (upload your Workshop Proposal to cloud storage and paste the link here)</h6>
+          <TextField
+            margin="dense"
+            id="proposalLink"
+            type="text"
+            fullWidth
+            onChange={proposalLinkHandler}
           />
         
       </DialogContent>
