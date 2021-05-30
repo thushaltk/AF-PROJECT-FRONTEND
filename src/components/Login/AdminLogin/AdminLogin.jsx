@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+
+import "./AdminLogin.css";
 
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
@@ -6,18 +8,17 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 import Alert from "@material-ui/lab/Alert";
 import * as LoginLoading from "../../../../public/53395-login.json";
 
-import "./AdminLogin.css";
 import Loading from "../../LandingPage/Loading";
 import { useHistory } from "react-router";
 import AdminService from "../../../services/AdminService";
 
 const AdminLogin = (props) => {
+  let history = useHistory();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [loginSuccess, setLoginSuccess] = useState("");
   const [processing, setProcessing] = useState(false);
 
-  let history = useHistory();
 
   const usernameChangeHandler = (event) => {
     setUsername(event.target.value);

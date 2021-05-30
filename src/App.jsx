@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import "./App.css";
@@ -25,6 +24,10 @@ const App = () => {
     }, 5100);
   }, []);
 
+  /**
+   * Hides the Header and footer components when the dashboards are loaded.
+   * @param {Rreturns a boolean value} v 
+   */
   const hideHeaderFooterHandler = (v) => {
     setHideHeaderFooter(v);
   }
