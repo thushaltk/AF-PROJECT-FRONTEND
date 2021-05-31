@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import {Admin, Resource} from 'react-admin';
 import restProvider from 'ra-data-simple-rest';
 import ResearchersList from './ResearchersList';
+import WSPresenterList from './WSPresenterList';
 
 const ReviewerDashboard = (props) => {
 
@@ -12,6 +13,8 @@ const ReviewerDashboard = (props) => {
     return ( 
         <Admin dataProvider={restProvider('http://localhost:5000/api')}>
             <Resource name="researcher" list={ResearchersList}/>
+            <Resource name="wspresenter" list={WSPresenterList}/>
+
         </Admin>
      );
 }

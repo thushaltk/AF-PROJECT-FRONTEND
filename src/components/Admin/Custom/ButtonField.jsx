@@ -6,17 +6,17 @@ import { Button } from "@material-ui/core";
 const ButtonField = (props) => {
     //const { source } = props;
     const record = useRecordContext(props);
+    const link = record.researchPaperURL || record.wsProposalLink;
+
     return(
         <Button variant="contained" onClick={()=>{
-            console.log(record.researchPaperURL);
+            //console.log(record.researchPaperURL);
             props.getID(record.id);
-            window.open(record.researchPaperURL, "_blank")
+            window.open(link, "_blank")
         }}>
             View
         </Button>
-    );
-    // 
-    
+    );    
 }
 
 ButtonField.propTypes = {

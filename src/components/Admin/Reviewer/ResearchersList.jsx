@@ -4,6 +4,7 @@ import Button from "@material-ui/core/Button";
 import ButtonField from "../Custom/ButtonField";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core";
 import { green, red } from "@material-ui/core/colors";
+import ResearcherService from "../../../services/ResearcherService";
 
 const theme = createMuiTheme({
   palette: {
@@ -13,14 +14,32 @@ const theme = createMuiTheme({
 });
 
 const ResearchersList = (props) => {
-    //TODO: Do Approve and Reject button functionality
   const [selectedID, setSelectedID] = useState("");
   const [colortheme, setColorTheme] = useState("");
-
-
+ 
   const getIDHandler = (id) => {
-    setSelectedID(id);
+    const researcherID = id;
+    setTimeout(()=>{
+      setSelectedID(researcherID);
+    },500);
   };
+
+  const updateApproveStatusHandler = async () => {
+    console.log(selectedID);
+    const updatedContent = {
+      status: 'Approved'
+    }
+    await ResearcherService.updateStatus(selectedID, updatedContent);
+  };
+
+  const deleteRejectStatusHandler = async () =>{
+    //TODO: Add delete option
+    const updatedContent = {
+      status: 'Rejected'
+    }
+    await ResearcherService.updateStatus(selectedID, updatedContent);
+    window.location.reload;
+  }
 
   return (
     <List {...props}>
@@ -36,12 +55,12 @@ const ResearchersList = (props) => {
           getID={getIDHandler}
         />
         <ThemeProvider theme={false}>
-          <Button variant="contained" color="primary">
+          <Button onClick={updateApproveStatusHandler}  variant="contained" color="primary">
             APPROVE
           </Button>
         </ThemeProvider>
         <ThemeProvider theme={false}>
-          <Button variant="contained" color="secondary">
+          <Button onClick={deleteRejectStatusHandler} variant="contained" color="secondary">
             REJECT
           </Button>
         </ThemeProvider>

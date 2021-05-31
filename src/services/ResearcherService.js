@@ -22,6 +22,19 @@ class ResearcherService{
         }
     }
 
+    async updateStatus(id, researcherDetails){
+        try{
+            await axios.patch(RESEARCHER_BASE_URL + `/${id}`, researcherDetails);
+        }catch(err){
+            if(err.response.status === 500){
+                console.log("Problem with the server");
+            }else{
+                console.log(err.response.data.msg);
+            }
+            console.log(err);
+        }
+    }
+
 }
 
 export default new ResearcherService();
