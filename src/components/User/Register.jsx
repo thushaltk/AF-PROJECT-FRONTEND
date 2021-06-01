@@ -48,6 +48,17 @@ const Register = () => {
   const [attendeeAlert, setAttendeeAlert] = useState(false);
   const [showAttendeeErrorAlert, setAttendeeShowErrorAlert] = useState(false);
 
+  useEffect(()=>{
+    const paymentDone = localStorage.getItem("paymentDone");
+    if(paymentDone){
+      setShowAlert(true);
+      setResponse(true);
+    }else{
+      setShowAlert(false);
+      setResponse(false);
+    }
+  },[])
+
   const researcherHandler = () => {
     isClickedResearcher(true);
   };
@@ -88,6 +99,7 @@ const Register = () => {
             setProcessPayment(false);
           }, 800);
         }
+        localStorage.setItem("paymentDone", true);
       }, 500);
     });
   }
