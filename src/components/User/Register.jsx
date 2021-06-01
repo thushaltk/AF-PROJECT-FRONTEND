@@ -49,7 +49,7 @@ const Register = () => {
   const [showAttendeeErrorAlert, setAttendeeShowErrorAlert] = useState(false);
 
   useEffect(()=>{
-    const paymentDone = localStorage.getItem("paymentDone");
+    const paymentDone = sessionStorage.getItem("paymentDone");
     if(paymentDone){
       setShowAlert(true);
       setResponse(true);
@@ -99,7 +99,7 @@ const Register = () => {
             setProcessPayment(false);
           }, 800);
         }
-        localStorage.setItem("paymentDone", true);
+        sessionStorage.setItem("paymentDone", true);
       }, 500);
     });
   }
