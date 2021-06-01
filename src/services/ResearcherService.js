@@ -35,6 +35,19 @@ class ResearcherService{
         }
     }
 
+    async deleteResearcher(id){
+        try{
+            await axios.delete(RESEARCHER_BASE_URL + `/${id}`);
+        }catch(err){
+            if(err.response.status === 500){
+                console.log("Problem with the server");
+            }else{
+                console.log(err.response.data.msg);
+            }
+            console.log(err);
+        }
+    }
+
 }
 
 export default new ResearcherService();

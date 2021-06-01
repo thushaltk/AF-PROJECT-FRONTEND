@@ -33,12 +33,9 @@ const ResearchersList = (props) => {
   };
 
   const deleteRejectStatusHandler = async () =>{
-    //TODO: Add delete option
-    const updatedContent = {
-      status: 'Rejected'
-    }
-    await ResearcherService.updateStatus(selectedID, updatedContent);
-    window.location.reload;
+  
+    await ResearcherService.deleteResearcher(selectedID);
+    //window.location.reload;
   }
 
   return (
