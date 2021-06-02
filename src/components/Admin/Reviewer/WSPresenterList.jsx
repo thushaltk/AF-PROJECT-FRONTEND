@@ -4,6 +4,7 @@ import Button from "@material-ui/core/Button";
 import ButtonField from "../Custom/ButtonField";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core";
 import { green, red } from "@material-ui/core/colors";
+import WSPresenterService from "../../../services/WSPresenterService";
 //import ResearcherService from "../../../services/ResearcherService";
 
 const theme = createMuiTheme({
@@ -20,8 +21,15 @@ const WSPresenterList = (props) => {
 
 
   const getIDHandler = (id) => {
-      
+    const wsid = id
+    setTimeout(()=>{
+      setSelectedID(wsid);
+    },500)
   };
+
+  const deleteWSPresenterHandler = async () => {
+    await WSPresenterService.deleteWSPresenter(selectedID);
+  }
 
   return (
     <List {...props}>
@@ -42,7 +50,7 @@ const WSPresenterList = (props) => {
           </Button>
         </ThemeProvider>
         <ThemeProvider theme={false}>
-          <Button variant="contained" color="secondary">
+          <Button onClick={deleteWSPresenterHandler} variant="contained" color="secondary">
             REJECT
           </Button>
         </ThemeProvider>

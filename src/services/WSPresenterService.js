@@ -20,6 +20,19 @@ class WSPresenterService{
             console.log(err);
         }
     }
+
+    async deleteWSPresenter(id){
+        try{
+            await axios.delete(WSPRESENTER_BASE_URL + `/${id}`);
+        }catch(err){
+            if(err.response.status === 500){
+                console.log("Problem with the server");
+            }else{
+                console.log(err.response.data.msg);
+            }
+            console.log(err);
+        }
+    }
 }
 
 export default new WSPresenterService();
