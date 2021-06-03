@@ -10,6 +10,9 @@ const Header = (props) => {
   const sendAdminLoginTrigger = () => {
     history.push("/admin-login");
   }
+  const sendReviewerLoginTrigger = () => {
+    history.push("/reviewer-login");
+  }
 
   const userRegistrationNavigator = () => {
     history.push("/new-user");
@@ -135,11 +138,11 @@ const Header = (props) => {
                   Admin Login
                 </button>
                 <a className="dropdown-item" href="#">
-                  Reviewer Login
-                </a>
-                <a className="dropdown-item" href="#">
                   Editor Login
                 </a>
+                <button className="dropdown-item" onClick={sendReviewerLoginTrigger}>
+                  Reviewer Login
+                </button>
                 <button className="dropdown-item" onClick={userRegistrationNavigator}>
                   User Registration
                 </button>

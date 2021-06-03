@@ -13,6 +13,7 @@ import * as WorldLoading from "../public/world-loading.json";
 import AdminDashboard from "./components/Admin/AdminDashboard";
 import Register from "./components/User/Register";
 import ReviewerDashboard from "./components/Admin/Reviewer/ReviewerDashboard";
+import ReviewerLogin from "./components/Login/Reviewer Login/ReviewerLogin";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -42,7 +43,6 @@ const App = () => {
           width={500}
         />
       </div>
-
       <div className="anim" hidden={isLoading}>
         <div hidden={hideHeaderFooter}>
           <Header/>
@@ -61,7 +61,10 @@ const App = () => {
             <Route path="/new-user">
               <Register />
             </Route>
-            <Route path="/reveiwerDash" >
+            <Route path="/reviewer-login">
+              <ReviewerLogin />
+            </Route>
+            <Route path="/reviewerDash" >
               <ReviewerDashboard hide={hideHeaderFooterHandler}/>
             </Route>
           </Switch>
