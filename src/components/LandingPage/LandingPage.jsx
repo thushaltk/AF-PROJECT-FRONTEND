@@ -11,6 +11,7 @@ import "./LandingPage.css";
 import "aos/dist/aos.css";
 import Loading from "./Loading";
 import Speakers from "./Speakers/Speakers";
+import DateComponent from "./DateComponent";
 
 const LandingPage = () => {
   useEffect(() => {
@@ -27,15 +28,31 @@ const LandingPage = () => {
           <h1 className="font-weight-semibold">
             INTERNATIONAL CONFERENCE ON APPLICATION FRAMEWORKS 2021
           </h1>
-          <h6 className="font-weight-normal text-muted pb-3">
-            Welcome to the International Conference on Application Frameworks ICAF 2021 Sri Lanka.
+          <br />
+          <h6 className="font-weight-normal text-muted">
+            <a
+              href="https://www.google.com/maps/place/Sri+Lanka+Institute+of+Information+Technology/@6.9146828,79.9707558,17z/data=!3m1!4b1!4m5!3m4!1s0x3ae256db1a6771c5:0x2c63e344ab9a7536!8m2!3d6.9146775!4d79.9729445"
+              style={{ textDecoration: "none" }}
+            >
+              <i
+                style={{ fontSize: "20px" }}
+                className="icon ion-android-locate"
+              />{" "}
+              Sri Lanka Institute of Information Technology
+            </a>
           </h6>
+          <h6 className="font-weight-normal text-muted">
+            <i style={{ fontSize: "20px" }} className="icon ion-android-time" />{" "}
+            8.00am - 3.00pm
+          </h6>
+          <br />
+          <DateComponent />
+          <br />
           <div>
             <Button variant="contained" color="primary">
               Learn more
             </Button>
           </div>
-          <br />
           <div style={{ width: "100%" }}>
             <Loading
               setContent={VideoConf}
@@ -101,7 +118,7 @@ const LandingPage = () => {
         </div>
         <br />
       </div>
-      <Speakers/>
+      <Speakers />
     </div>
   );
 };
