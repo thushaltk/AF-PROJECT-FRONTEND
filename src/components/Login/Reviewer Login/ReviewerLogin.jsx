@@ -10,7 +10,6 @@ import * as ReviewerLoginLoading from "../../../../public/28620-login-do-policha
 
 import Loading from "../../LandingPage/Loading";
 import { useHistory } from "react-router";
-1;
 import ReviewerService from "../../../services/ReviewerService";
 import { validate, VALIDATOR_EMAIL, VALIDATOR_REQUIRE } from "../../../util/validators";
 

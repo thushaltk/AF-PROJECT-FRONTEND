@@ -10,8 +10,6 @@ const ButtonField = (props) => {
 
     return(
         <Button variant="contained" onClick={()=>{
-            //console.log(record.researchPaperURL);
-            props.getID(record.id);
             window.open(link, "_blank")
         }}>
             View

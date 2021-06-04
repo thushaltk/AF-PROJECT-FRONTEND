@@ -15,6 +15,16 @@ class AttendeeService{
         }
     }
 
+    async getAllAttendeeCount(){
+        try{
+            const allAttendees = await axios.get(ATTENDEE_BASE_URL);
+            const attendeeCount = allAttendees.data.length;
+            return attendeeCount;
+        }catch(err){
+            console.log("count error:= ", err);
+        }
+    }
+
 }
 
 export default new AttendeeService();

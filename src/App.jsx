@@ -55,8 +55,8 @@ const App = () => {
             <Route path="/admin-login">
               <AdminLogin />
             </Route>
-            <Route path="/admin/admin-dashboard">
-              <AdminDashboard />
+            <Route path="/admin/adminDash">
+              <AdminDashboard hide={hideHeaderFooterHandler}/>
             </Route>
             <Route path="/new-user">
               <Register />

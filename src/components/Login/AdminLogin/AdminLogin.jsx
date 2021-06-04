@@ -41,7 +41,7 @@ const AdminLogin = (props) => {
       setLoginSuccess(loggedIn);
 
       if (loggedIn === true) {
-        history.push("/admin/admin-dashboard");
+        history.push("/admin/adminDash");
       }
     }, 500);
   };

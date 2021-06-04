@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import {Admin, Resource} from 'react-admin';
 import restProvider from 'ra-data-simple-rest';
-import ResearchersList from './ResearchersList';
-import WSPresenterList from './WSPresenterList';
+import ResearchersList from '../Custom/ResearchersList';
+import WSPresenterList from '../Custom/WSPresenterList';
 
 const ReviewerDashboard = (props) => {
 
