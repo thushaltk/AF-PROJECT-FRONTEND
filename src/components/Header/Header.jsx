@@ -21,6 +21,9 @@ const Header = (props) => {
   const userLoginNavigator = () => {
     history.push("/user-login");
   }
+  const sendEditorLoginTrigger = () => {
+    history.push("/editor-login");
+  }
 
   return (
     <nav style={{padding: "20px 10px", width: "100%"}} className="navbar navbar-light navbar-expand-md custom-header">
@@ -137,9 +140,9 @@ const Header = (props) => {
                 <button className="dropdown-item" onClick={sendAdminLoginTrigger}>
                   Admin Login
                 </button>
-                <a className="dropdown-item" href="#">
+                <button className="dropdown-item" onClick={sendEditorLoginTrigger}>
                   Editor Login
-                </a>
+                </button>
                 <button className="dropdown-item" onClick={sendReviewerLoginTrigger}>
                   Reviewer Login
                 </button>
