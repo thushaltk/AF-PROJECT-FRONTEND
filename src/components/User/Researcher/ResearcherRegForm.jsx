@@ -8,7 +8,14 @@ import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import { Button } from "@material-ui/core";
 import ResearcherService from "../../../services/ResearcherService";
-
+import {
+  validate,
+  VALIDATOR_EMAIL,
+  VALIDATOR_MAXLENGTH,
+  VALIDATOR_MINLENGTH,
+  VALIDATOR_REQUIRE,
+} from "../../../util/validators";
+import Alert from "@material-ui/lab/Alert";
 
 const ResearcherRegForm = (props) => {
   const [open, setOpen] = useState(props.open);
@@ -17,45 +24,114 @@ const ResearcherRegForm = (props) => {
   const [enteredEmail, setEnteredEmail] = useState("");
   const [enteredMobileNo, setEnteredMobileNo] = useState("");
   const [uploadedFileLink, setUploadedFileLink] = useState("");
-
+  const [errorAlert, setErrorAlert] = useState(false);
+  const [isValid, setIsValid] = useState({
+    name: false,
+    address: false,
+    email: false,
+    mobileNo: false,
+  });
+  const [isTouched, setIsTouched] = useState({
+    name: false,
+    address: false,
+    email: false,
+    mobileNo: false,
+  });
 
   const handleClose = () => {
     setOpen(false);
     props.close(false);
   };
 
+  const inputValidate = (name, value, type) => {
+    if (name === "name") {
+      setIsValid({
+        ...isValid,
+        name: validate(value, type),
+      });
+    } else if (name === "address") {
+      setIsValid({
+        ...isValid,
+        address: validate(value, type),
+      });
+    } else if (name === "email") {
+      setIsValid({
+        ...isValid,
+        email: validate(value, type),
+      });
+    } else if (name === "mobileNo") {
+      setIsValid({
+        ...isValid,
+        mobileNo: validate(value, type),
+      });
+    }
+  };
+
+  const onBlurHandler = (event) => {
+    setErrorAlert(false);
+    if (event.target.name === "name") {
+      setIsTouched({
+        ...isTouched,
+        name: true,
+      });
+    } else if (event.target.name === "address") {
+      setIsTouched({
+        ...isTouched,
+        address: true,
+      });
+    } else if (event.target.name === "email") {
+      setIsTouched({
+        ...isTouched,
+        email: true,
+      });
+    } else if (event.target.name === "mobileNo") {
+      setIsTouched({
+        ...isTouched,
+        mobileNo: true,
+      });
+    }
+  };
+
   const fullNameHandler = (event) => {
     setEnteredFullName(event.target.value);
-  }
+    inputValidate(event.target.name, event.target.value, [VALIDATOR_REQUIRE()]);
+  };
   const addressHandler = (event) => {
     setEnteredAddress(event.target.value);
-  }
+    inputValidate(event.target.name, event.target.value, [VALIDATOR_REQUIRE()]);
+  };
   const emailHandler = (event) => {
     setEnteredEmail(event.target.value);
-  }
+    inputValidate(event.target.name, event.target.value, [VALIDATOR_EMAIL()]);
+  };
   const mobileNoHandler = (event) => {
     setEnteredMobileNo(event.target.value);
-  }
+    inputValidate(event.target.name, event.target.value, [
+      VALIDATOR_MAXLENGTH(10),
+      VALIDATOR_MINLENGTH(10),
+    ]);
+  };
   const fileUploadHandler = (event) => {
     setUploadedFileLink(event.target.value);
-  }
+  };
 
-  const formHandler = (e) => {
-    e.preventDefault();
-    handleClose();
-
+  const formHandler = () => {
     const formData = {
-        fullName: enteredFullName,
-        address: enteredAddress,
-        email: enteredEmail,
-        mobileNo: enteredMobileNo,
-        isPaid: true,
-        researchPaperURL: uploadedFileLink
-    }
+      fullName: enteredFullName,
+      address: enteredAddress,
+      email: enteredEmail,
+      mobileNo: enteredMobileNo,
+      isPaid: true,
+      researchPaperURL: uploadedFileLink,
+    };
     console.log(formData);
-    ResearcherService.sendResearcherDetails(formData);    
-  }
-
+    if (isValid.name && isValid.address && isValid.email && isValid.mobileNo) {
+      ResearcherService.sendResearcherDetails(formData);
+      handleClose();
+    } else {
+      setErrorAlert(true);
+    }
+  };
 
   return (
     <Dialog
@@ -63,65 +139,96 @@ const ResearcherRegForm = (props) => {
       onClose={handleClose}
       aria-labelledby="form-dialog-title"
     >
-      <DialogTitle id="form-dialog-title" style={{textAlign: "center"}}>Welcome. Want to be a Researcher? Register below.</DialogTitle>
-      <form onSubmit={formHandler}>
-      <DialogContent>
-        <DialogContentText>
-          To subscribe to this website, please enter your email address here. We
-          will send updates occasionally.
-        </DialogContentText>
-        
+      <DialogTitle id="form-dialog-title" style={{ textAlign: "center" }}>
+        Welcome. Want to be a Researcher? Register below.
+      </DialogTitle>
+      <form>
+        <DialogContent>
+          <DialogContentText>
+            We are glad you to be a part of our conference. Welcome and we would
+            like you publish your valuable research paper below. Make sure to
+            upload your research paper to cloud storage (Google Drive, OneDrive,
+            etc..) and make it accessible to public. Then paste the link below.
+            Enjoy the conference.
+          </DialogContentText>
+
           <TextField
+            required
+            error={!isValid.name && isTouched.name}
+            name="name"
             margin="dense"
             id="name"
             label="Full Name"
             type="text"
             fullWidth
             onChange={fullNameHandler}
+            onBlur={onBlurHandler}
           />
           <TextField
+            required
+            error={!isValid.address && isTouched.address}
+            name="address"
             margin="dense"
             id="address"
             label="Address"
             type="text"
             fullWidth
             onChange={addressHandler}
+            onBlur={onBlurHandler}
           />
           <TextField
+            required
+            error={!isValid.email && isTouched.email}
+            name="email"
             margin="dense"
             id="email"
             label="Email Address"
             type="email"
             fullWidth
             onChange={emailHandler}
+            onBlur={onBlurHandler}
           />
           <TextField
+            required
+            error={!isValid.mobileNo && isTouched.mobileNo}
+            name="mobileNo"
             margin="dense"
             id="mobileNo"
             label="Mobile No"
             type="number"
             fullWidth
             onChange={mobileNoHandler}
+            onBlur={onBlurHandler}
           />
-          <br/><br/>
-          <h6>Upload Research Paper Link (upload your reasearch paper to cloud storage and paste the link here)</h6>
+          <br />
+          <br />
+          <h6>
+            Upload Research Paper Link (upload your reasearch paper to cloud
+            storage and paste the link here)
+          </h6>
           <TextField
+            required
             margin="dense"
             id="researchPaper"
+            helperText="Format should be 'https://....' "
             type="text"
             fullWidth
             onChange={fileUploadHandler}
           />
-        
-      </DialogContent>
-      <DialogActions>
-        <Button onClick={handleClose} color="secondary">
-          CANCEL
-        </Button>
-        <Button type="submit" color="primary">
-          REGISTER
-        </Button>
-      </DialogActions>
+          <br />
+          <br />
+          <Alert hidden={!errorAlert} severity="error">
+            Check inputs again!....
+          </Alert>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose} color="secondary">
+            CANCEL
+          </Button>
+          <Button onClick={formHandler} color="primary">
+            REGISTER
+          </Button>
+        </DialogActions>
       </form>
     </Dialog>
   );
