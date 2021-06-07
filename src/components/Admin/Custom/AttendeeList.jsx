@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { List, Datagrid, TextField } from "react-admin";
-import { createMuiTheme, ThemeProvider } from "@material-ui/core";
+import { CircularProgress, createMuiTheme, ThemeProvider } from "@material-ui/core";
 import { green, red } from "@material-ui/core/colors";
 import AttendeeCount from "./AttendeeCount";
 
@@ -12,10 +12,18 @@ const theme = createMuiTheme({
 });
 
 const AttendeeList = (props) => {
+  const [initialLoading, setInitialLoading] = useState(false);
+
+    useEffect(()=>{
+        setTimeout(()=>{
+            setInitialLoading(true);
+        },500)
+    },[])
 
   return (
-    <div style={{padding: "10px"}}>
+    <div className="text-center" style={{padding: "10px"}}>
       <AttendeeCount/>
+      <CircularProgress hidden={initialLoading}/>
       <List {...props}>
         <Datagrid>
           <TextField source="id" />

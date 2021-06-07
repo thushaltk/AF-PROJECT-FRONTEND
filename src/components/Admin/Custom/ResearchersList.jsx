@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { List, Datagrid, TextField } from "react-admin";
 import Button from "@material-ui/core/Button";
 import ApproveButtonField from "./ApproveButtonField";
 import ButtonField from "./ButtonField";
-import { createMuiTheme, ThemeProvider } from "@material-ui/core";
+import {
+  CircularProgress,
+  createMuiTheme,
+  ThemeProvider,
+} from "@material-ui/core";
 import { green, red } from "@material-ui/core/colors";
 import ResearcherService from "../../../services/ResearcherService";
 
@@ -17,8 +21,14 @@ const theme = createMuiTheme({
 const ResearchersList = (props) => {
   const [selectedID, setSelectedID] = useState("");
   const [colortheme, setColorTheme] = useState("");
+  const [initialLoading, setInitialLoading] = useState(false);
   var statusState;
 
+  useEffect(() => {
+    setTimeout(() => {
+      setInitialLoading(true);
+    }, 500);
+  }, []);
 
   const updateApproveStatusHandler = async (id, status) => {
     const researcherID = id;
@@ -47,31 +57,34 @@ const ResearchersList = (props) => {
   };
 
   return (
-    <List {...props}>
-      <Datagrid>
-        <TextField source="id" />
-        <TextField source="fullName" />
-        <TextField source="email" />
-        <TextField source="mobileNo" />
-        <TextField label="Approval Status" source="status" />
-        <ButtonField label="URL" source="researchPaperURL" />
-        <ThemeProvider theme={false}>
-          <ApproveButtonField
-            source="status"
-            updateStatus={updateApproveStatusHandler}
-          />
-        </ThemeProvider>
-        <ThemeProvider theme={false}>
-          <Button
-            onClick={deleteRejectStatusHandler}
-            variant="contained"
-            color="secondary"
-          >
-            REJECT
-          </Button>
-        </ThemeProvider>
-      </Datagrid>
-    </List>
+    <div className="text-center" style={{ padding: "10px" }}>
+      <CircularProgress hidden={initialLoading} />
+      <List {...props}>
+        <Datagrid>
+          <TextField source="id" />
+          <TextField source="fullName" />
+          <TextField source="email" />
+          <TextField source="mobileNo" />
+          <TextField label="Approval Status" source="status" />
+          <ButtonField label="URL" source="researchPaperURL" />
+          <ThemeProvider theme={false}>
+            <ApproveButtonField
+              source="status"
+              updateStatus={updateApproveStatusHandler}
+            />
+          </ThemeProvider>
+          <ThemeProvider theme={false}>
+            <Button
+              onClick={deleteRejectStatusHandler}
+              variant="contained"
+              color="secondary"
+            >
+              REJECT
+            </Button>
+          </ThemeProvider>
+        </Datagrid>
+      </List>
+    </div>
   );
 };
 

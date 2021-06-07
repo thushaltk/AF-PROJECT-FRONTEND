@@ -12,6 +12,7 @@ import Loading from "../../LandingPage/Loading";
 import { useHistory } from "react-router";
 import { validate, VALIDATOR_EMAIL, VALIDATOR_REQUIRE } from "../../../util/validators";
 import EditorService from "../../../services/EditorService";
+import EditorChangePwd from "./EditorChangePwd";
 
 const EditorLogin = (props) => {
   let history = useHistory();
@@ -20,6 +21,7 @@ const EditorLogin = (props) => {
   const [loginSuccess, setLoginSuccess] = useState("");
   const [processing, setProcessing] = useState(false);
   const [errorAlert, setErrorAlert] = useState(false);
+  const [clickedEditor, isClickedEditor] = useState(false);
   const [isValid, setIsValid] = useState({
     email: false,
     password: false,
@@ -96,6 +98,15 @@ const EditorLogin = (props) => {
     console.log("Response = ", response);
   };
 
+  const editorChangePasswordHandler = () => {
+    isClickedEditor(true);
+  }
+  
+  const setToClose = (cls) => {
+    isClickedEditor(cls);
+  };
+
+
   return (
     <div className="row login-clean">
       <div className="col col-sm-1"></div>
@@ -141,9 +152,18 @@ const EditorLogin = (props) => {
           <br />
           <div className="form-group" style={{ textAlign: "center" }}>
             <CircularProgress hidden={!processing} />
+            <div style={{display: "flex", justifyContent: "space-between"}}>
             <Button
               hidden={processing}
-              className="btn-block"
+              type="button"
+              variant="contained"
+              color="secondary"
+              onClick={editorChangePasswordHandler}
+            >
+              Create New Password
+            </Button>
+            <Button
+              hidden={processing}
               type="button"
               variant="contained"
               color="primary"
@@ -151,7 +171,9 @@ const EditorLogin = (props) => {
             >
               Log In
             </Button>
-            <br /><br />
+
+            </div>
+            <br />
             <Alert hidden={!errorAlert} severity="error">
             Check inputs again!....
           </Alert>
@@ -163,10 +185,8 @@ const EditorLogin = (props) => {
               ""
             )}
           </div>
-          <a className="forgot" href="#">
-            Forgot your email or password?
-          </a>
         </form>
+        {clickedEditor ? <EditorChangePwd open={clickedEditor} close={setToClose}/> : ""}
       </div>
     </div>
   );
