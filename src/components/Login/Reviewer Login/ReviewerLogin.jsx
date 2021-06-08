@@ -11,7 +11,12 @@ import * as ReviewerLoginLoading from "../../../../public/28620-login-do-policha
 import Loading from "../../LandingPage/Loading";
 import { useHistory } from "react-router";
 import ReviewerService from "../../../services/ReviewerService";
-import { validate, VALIDATOR_EMAIL, VALIDATOR_REQUIRE } from "../../../util/validators";
+import {
+  validate,
+  VALIDATOR_EMAIL,
+  VALIDATOR_REQUIRE,
+} from "../../../util/validators";
+import ReviewerChangePwd from "./ReviewerChangePwd";
 
 const ReviewerLogin = (props) => {
   let history = useHistory();
@@ -20,6 +25,7 @@ const ReviewerLogin = (props) => {
   const [loginSuccess, setLoginSuccess] = useState("");
   const [processing, setProcessing] = useState(false);
   const [errorAlert, setErrorAlert] = useState(false);
+  const [clickedReviewer, isClickedReviewer] = useState(false);
   const [isValid, setIsValid] = useState({
     email: false,
     password: false,
@@ -60,7 +66,10 @@ const ReviewerLogin = (props) => {
 
   const emailChangeHandler = (event) => {
     setEmail(event.target.value);
-    inputValidate(event.target.name, event.target.value, [VALIDATOR_REQUIRE(), VALIDATOR_EMAIL()]);
+    inputValidate(event.target.name, event.target.value, [
+      VALIDATOR_REQUIRE(),
+      VALIDATOR_EMAIL(),
+    ]);
   };
   const passwordChangeHandeler = (event) => {
     setPassword(event.target.value);
@@ -88,12 +97,20 @@ const ReviewerLogin = (props) => {
     } else {
       setProcessing(true);
       setTimeout(() => {
-          setProcessing(false);
-          setErrorAlert(true);
+        setProcessing(false);
+        setErrorAlert(true);
       }, 800);
     }
 
     console.log("Response = ", response);
+  };
+
+  const reviewerChangePasswordHandler = () => {
+    isClickedReviewer(true);
+  };
+
+  const setToClose = (cls) => {
+    isClickedReviewer(cls);
   };
 
   return (
@@ -141,20 +158,30 @@ const ReviewerLogin = (props) => {
           <br />
           <div className="form-group" style={{ textAlign: "center" }}>
             <CircularProgress hidden={!processing} />
-            <Button
-              hidden={processing}
-              className="btn-block"
-              type="button"
-              variant="contained"
-              color="primary"
-              onClick={login}
-            >
-              Log In
-            </Button>
-            <br /><br />
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <Button
+                hidden={processing}
+                type="button"
+                variant="contained"
+                color="secondary"
+                onClick={reviewerChangePasswordHandler}
+              >
+                Create New Password
+              </Button>
+              <Button
+                hidden={processing}
+                type="button"
+                variant="contained"
+                color="primary"
+                onClick={login}
+              >
+                Log In
+              </Button>
+            </div>
+            <br />
             <Alert hidden={!errorAlert} severity="error">
-            Check inputs again!....
-          </Alert>
+              Check inputs again!....
+            </Alert>
             {loginSuccess === true ? (
               <Alert severity="success">LOGIN SUCESS!!!</Alert>
             ) : loginSuccess === false ? (
@@ -163,10 +190,12 @@ const ReviewerLogin = (props) => {
               ""
             )}
           </div>
-          <a className="forgot" href="#">
-            Forgot your email or password?
-          </a>
         </form>
+        {clickedReviewer ? (
+          <ReviewerChangePwd open={clickedReviewer} close={setToClose} />
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );

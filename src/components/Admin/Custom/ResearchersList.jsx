@@ -5,22 +5,12 @@ import ApproveButtonField from "./ApproveButtonField";
 import ButtonField from "./ButtonField";
 import {
   CircularProgress,
-  createMuiTheme,
   ThemeProvider,
 } from "@material-ui/core";
-import { green, red } from "@material-ui/core/colors";
 import ResearcherService from "../../../services/ResearcherService";
-
-const theme = createMuiTheme({
-  palette: {
-    primary: green,
-    secondary: red,
-  },
-});
 
 const ResearchersList = (props) => {
   const [selectedID, setSelectedID] = useState("");
-  const [colortheme, setColorTheme] = useState("");
   const [initialLoading, setInitialLoading] = useState(false);
   var statusState;
 

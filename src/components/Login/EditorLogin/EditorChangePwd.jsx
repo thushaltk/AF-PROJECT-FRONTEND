@@ -138,7 +138,7 @@ const EditorChangePwd = (props) => {
       aria-labelledby="form-dialog-title"
     >
       <DialogTitle id="form-dialog-title" style={{ textAlign: "center" }}>
-        Add New Editor
+        Change/Create Password - Editor
       </DialogTitle>
       <form>
         <DialogContent>

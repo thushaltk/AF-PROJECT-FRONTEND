@@ -3,12 +3,14 @@ import { List, Datagrid, TextField } from "react-admin";
 import Button from "@material-ui/core/Button";
 import ButtonField from "./ButtonField";
 import { CircularProgress, ThemeProvider } from "@material-ui/core";
-import WSPresenterService from "../../../services/WSPresenterService";s
+import WSPresenterService from "../../../services/WSPresenterService";
+import ApproveButtonField from "./ApproveButtonField";
 
 const WSPresenterList = (props) => {
   //TODO: Do Approve and Reject button functionality
   const [selectedID, setSelectedID] = useState("");
   const [initialLoading, setInitialLoading] = useState(false);
+  var statusState;
 
   useEffect(() => {
     setTimeout(() => {
@@ -16,11 +18,25 @@ const WSPresenterList = (props) => {
     }, 500);
   }, []);
 
-  const getIDHandler = (id) => {
-    const wsid = id;
+  const updateApproveStatusHandler = async (id, status) => {
+    const wspresenterID = id;
     setTimeout(() => {
-      setSelectedID(wsid);
+      setSelectedID(wspresenterID);
     }, 500);
+
+    if (status === "Approved by Reviewer") {
+      statusState = "Approved By ADMIN";
+      //console.log("if = ", statusState);
+    } else {
+      statusState = "Approved by Reviewer";
+      //console.log("else = ", statusState);
+    }
+
+    const updatedContent = {
+      status: statusState,
+    };
+    console.log("updatedContent = ", statusState);
+    await WSPresenterService.updateStatus(id, updatedContent);
   };
 
   const deleteWSPresenterHandler = async () => {
@@ -40,12 +56,12 @@ const WSPresenterList = (props) => {
           <ButtonField
             label="URL"
             source="wsProposalLink"
-            getID={getIDHandler}
           />
           <ThemeProvider theme={false}>
-            <Button variant="contained" color="primary">
-              APPROVE
-            </Button>
+            <ApproveButtonField
+              source="status"
+              updateStatus={updateApproveStatusHandler}
+            />
           </ThemeProvider>
           <ThemeProvider theme={false}>
             <Button

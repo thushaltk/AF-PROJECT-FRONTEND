@@ -15,6 +15,7 @@ import Register from "./components/User/Register";
 import ReviewerDashboard from "./components/Admin/Reviewer/ReviewerDashboard";
 import ReviewerLogin from "./components/Login/Reviewer Login/ReviewerLogin";
 import EditorLogin from "./components/Login/EditorLogin/EditorLogin";
+import EditorDashboard from "./components/Admin/Editor/EditorDashboard";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -67,6 +68,9 @@ const App = () => {
             </Route>
             <Route path="/editor-login">
               <EditorLogin />
+            </Route>
+            <Route path="/editorDash">
+              <EditorDashboard hide={hideHeaderFooterHandler}/>
             </Route>
             <Route path="/reviewerDash" >
               <ReviewerDashboard hide={hideHeaderFooterHandler}/>

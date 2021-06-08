@@ -6,7 +6,7 @@ const Logout = () => {
 
   useEffect(() => {
     setTimeout(() => {
-        window.location.href = "../../../../admin-login";
+        window.location.href = "../../../../";
     }, 3000);
   }, []);
 
