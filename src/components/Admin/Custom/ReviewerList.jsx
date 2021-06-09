@@ -11,7 +11,6 @@ import AddReviewer from "../Reviewer/AddReviewer";
 const ReviewerList = (props) => {
   const [initialLoading, setInitialLoading] = useState(false);
   const [clickedReviewer, isClickedReviewer] = useState(false);
-  let history = useHistory();
 
   useEffect(() => {
     setTimeout(() => {

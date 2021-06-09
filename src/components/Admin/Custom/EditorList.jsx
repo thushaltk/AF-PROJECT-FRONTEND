@@ -9,13 +9,6 @@ import { green, red } from "@material-ui/core/colors";
 import { useHistory } from "react-router";
 import AddEditor from "../Editor/AddEditor";
 
-const theme = createMuiTheme({
-  palette: {
-    primary: green,
-    secondary: red,
-  },
-});
-
 const EditorList = (props) => {
   const [initialLoading, setInitialLoading] = useState(false);
   const [clickedEditor, isClickedEditor] = useState(false);

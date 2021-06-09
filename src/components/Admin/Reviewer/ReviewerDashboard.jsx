@@ -15,7 +15,6 @@ const ReviewerDashboard = (props) => {
         <Admin dataProvider={restProvider('http://localhost:5000/api')} loginPage={Logout}>
             <Resource name="researcher" list={ResearchersList}/>
             <Resource name="wspresenter" list={WSPresenterList}/>
-
         </Admin>
      );
 }

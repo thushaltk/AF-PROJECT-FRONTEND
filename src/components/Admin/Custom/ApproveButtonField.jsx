@@ -4,7 +4,6 @@ import { useRecordContext } from 'react-admin';
 import { Button } from "@material-ui/core";
 
 const ApproveButtonField = (props) => {
-    //const { source } = props;
     const record = useRecordContext(props);
 
     return(

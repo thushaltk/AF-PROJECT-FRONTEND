@@ -29,11 +29,11 @@ const App = () => {
 
   /**
    * Hides the Header and footer components when the dashboards are loaded.
-   * @param {Rreturns a boolean value} v 
+   * @param {Returns a boolean value} v
    */
   const hideHeaderFooterHandler = (v) => {
     setHideHeaderFooter(v);
-  }
+  };
 
   return (
     <Router>
@@ -47,7 +47,7 @@ const App = () => {
       </div>
       <div className="anim" hidden={isLoading}>
         <div hidden={hideHeaderFooter}>
-          <Header/>
+          <Header />
         </div>
         <div>
           <Switch>
@@ -58,7 +58,7 @@ const App = () => {
               <AdminLogin />
             </Route>
             <Route path="/admin/adminDash">
-              <AdminDashboard hide={hideHeaderFooterHandler}/>
+              <AdminDashboard hide={hideHeaderFooterHandler} />
             </Route>
             <Route path="/new-user">
               <Register />
@@ -70,10 +70,10 @@ const App = () => {
               <EditorLogin />
             </Route>
             <Route path="/editorDash">
-              <EditorDashboard hide={hideHeaderFooterHandler}/>
+              <EditorDashboard hide={hideHeaderFooterHandler} />
             </Route>
-            <Route path="/reviewerDash" >
-              <ReviewerDashboard hide={hideHeaderFooterHandler}/>
+            <Route path="/reviewerDash">
+              <ReviewerDashboard hide={hideHeaderFooterHandler} />
             </Route>
           </Switch>
         </div>

@@ -129,9 +129,6 @@ const Register = () => {
         }
       }, 1000);
     });
-
-
-
   };
 
   return (

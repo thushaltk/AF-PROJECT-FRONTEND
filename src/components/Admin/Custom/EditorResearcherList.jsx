@@ -8,9 +8,7 @@ import {
 } from "@material-ui/core";
 
 const EditorResearcherList = (props) => {
-  const [selectedID, setSelectedID] = useState("");
   const [initialLoading, setInitialLoading] = useState(false);
-  var statusState;
 
   useEffect(() => {
     setTimeout(() => {

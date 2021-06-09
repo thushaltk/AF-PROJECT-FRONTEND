@@ -25,10 +25,8 @@ const WSPresenterList = (props) => {
 
     if (status === "Approved by Reviewer") {
       statusState = "Approved By ADMIN";
-      //console.log("if = ", statusState);
     } else {
       statusState = "Approved by Reviewer";
-      //console.log("else = ", statusState);
     }
 
     const updatedContent = {

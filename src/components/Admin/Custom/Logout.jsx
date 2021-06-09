@@ -1,5 +1,4 @@
 import { Backdrop, Button, CircularProgress } from "@material-ui/core";
-import Alert from "@material-ui/lab/Alert";
 import React, { useEffect, useState } from "react";
 
 const Logout = () => {

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 import TextField from "@material-ui/core/TextField";
 import Dialog from "@material-ui/core/Dialog";
@@ -95,7 +95,6 @@ const WSPresenter = (props) => {
   const fullNameHandler = (event) => {
     setEnteredFullName(event.target.value);
     inputValidate(event.target.name, event.target.value, [VALIDATOR_REQUIRE()]);
-    //console.log("isValid = ", validate(event.target.value, [VALIDATOR_REQUIRE()]));
   };
   const addressHandler = (event) => {
     setEnteredAddress(event.target.value);
@@ -216,7 +215,8 @@ const WSPresenter = (props) => {
             fullWidth
             onChange={proposalLinkHandler}
           />
-          <br/><br/>
+          <br />
+          <br />
           <Alert hidden={!errorAlert} severity="error">
             Check inputs again!....
           </Alert>

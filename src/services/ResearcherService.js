@@ -47,7 +47,6 @@ class ResearcherService{
             console.log(err);
         }
     }
-
 }
 
 export default new ResearcherService();

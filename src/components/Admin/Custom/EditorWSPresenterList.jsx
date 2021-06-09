@@ -5,9 +5,7 @@ import ButtonField from "./ButtonField";
 import { CircularProgress} from "@material-ui/core";
 
 const EditorWSPresenterList = (props) => {
-  const [selectedID, setSelectedID] = useState("");
   const [initialLoading, setInitialLoading] = useState(false);
-  var statusState;
 
   useEffect(() => {
     setTimeout(() => {
