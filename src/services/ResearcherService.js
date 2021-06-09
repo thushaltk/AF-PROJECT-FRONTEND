@@ -11,7 +11,7 @@ class ResearcherService{
         console.log(researcherDetails);
         try{
             await axios.post(RESEARCHER_BASE_URL + "/add-researcher", researcherDetails);
-
+            return true;
         }catch(err){
             if(err.response.status === 500){
                 console.log("Problem with the server");
@@ -19,6 +19,7 @@ class ResearcherService{
                 console.log(err.response.data.msg);
             }
             console.log(err);
+            return false;
         }
     }
 

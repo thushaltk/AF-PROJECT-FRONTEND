@@ -6,7 +6,7 @@ import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
-import { Button } from "@material-ui/core";
+import { Button, CircularProgress } from "@material-ui/core";
 import ResearcherService from "../../../services/ResearcherService";
 import {
   validate,
@@ -25,6 +25,9 @@ const ResearcherRegForm = (props) => {
   const [enteredMobileNo, setEnteredMobileNo] = useState("");
   const [uploadedFileLink, setUploadedFileLink] = useState("");
   const [errorAlert, setErrorAlert] = useState(false);
+  const [registerSuccess, setRegisterSuccess] = useState(false);
+  const [registerError, setRegisterError] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [isValid, setIsValid] = useState({
     name: false,
     address: false,
@@ -116,6 +119,7 @@ const ResearcherRegForm = (props) => {
   };
 
   const formHandler = () => {
+    setLoading(true);
     const formData = {
       fullName: enteredFullName,
       address: enteredAddress,
@@ -126,9 +130,17 @@ const ResearcherRegForm = (props) => {
     };
     console.log(formData);
     if (isValid.name && isValid.address && isValid.email && isValid.mobileNo) {
-      ResearcherService.sendResearcherDetails(formData);
-      handleClose();
+      ResearcherService.sendResearcherDetails(formData).then(res=>{
+        if(res){
+          setLoading(false);
+          setRegisterSuccess(res);
+        }else{
+          setLoading(false);
+          setRegisterError(res);
+        }
+      });
     } else {
+      setLoading(false);
       setErrorAlert(true);
     }
   };
@@ -220,6 +232,11 @@ const ResearcherRegForm = (props) => {
           <Alert hidden={!errorAlert} severity="error">
             Check inputs again!....
           </Alert>
+          <Alert hidden={!registerSuccess} severity="success">Registered Successfully!!!</Alert>
+          <Alert hidden={!registerError} severity="error">Opps..Something is not right...Try Again!!!</Alert>
+          <div className="text-center">
+          <CircularProgress hidden={!loading}/>
+          </div>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose} color="secondary">
