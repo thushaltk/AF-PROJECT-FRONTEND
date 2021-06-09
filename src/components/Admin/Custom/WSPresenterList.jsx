@@ -7,7 +7,6 @@ import WSPresenterService from "../../../services/WSPresenterService";
 import ApproveButtonField from "./ApproveButtonField";
 
 const WSPresenterList = (props) => {
-  //TODO: Do Approve and Reject button functionality
   const [selectedID, setSelectedID] = useState("");
   const [initialLoading, setInitialLoading] = useState(false);
   var statusState;
