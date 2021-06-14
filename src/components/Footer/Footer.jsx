@@ -24,18 +24,7 @@ const Footer = () => {
     <footer className="footer-clean">
       <div className="container">
         <div className="row justify-content-center">
-          <div className="col-md-8 item">
-            <p style={{ textAlign: "center", color: "#000" }}>
-              <strong>SEARCH</strong>
-            </p>
-            <TextField
-              className="mat-search"
-              id="filled-basic"
-              label="Search"
-              variant="filled"
-            />
-          </div>
-          <div className="col-lg-3 item social">
+          <div className="col-lg-3 item social text-center">
             <a href="#">
               <i className="icon ion-social-facebook" />
             </a>
@@ -48,7 +37,7 @@ const Footer = () => {
             <a href="#">
               <i className="icon ion-social-instagram" />
             </a>
-            <p className="copyright" style={{color: "#000"}}>LAND OF GODS © 2021</p>
+            <p className="copyright text-center" style={{color: "#000"}}>LAND OF GODS © 2021</p>
           </div>
         </div>
         <br />
