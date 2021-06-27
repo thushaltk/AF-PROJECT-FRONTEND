@@ -16,6 +16,7 @@ import ReviewerDashboard from "./components/Admin/Reviewer/ReviewerDashboard";
 import ReviewerLogin from "./components/Login/Reviewer Login/ReviewerLogin";
 import EditorLogin from "./components/Login/EditorLogin/EditorLogin";
 import EditorDashboard from "./components/Admin/Editor/EditorDashboard";
+import Papers from "./components/Papers/Papers";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -53,6 +54,9 @@ const App = () => {
           <Switch>
             <Route exact path="/">
               <LandingPage />
+            </Route>
+            <Route exact path="/papers">
+              <Papers />
             </Route>
             <Route path="/admin-login">
               <AdminLogin />

@@ -6,9 +6,11 @@ import ButtonField from "./ButtonField";
 import {
   CircularProgress,
 } from "@material-ui/core";
+import AddPaper from "../Editor/AddPaper";
 
 const EditorResearcherList = (props) => {
   const [initialLoading, setInitialLoading] = useState(false);
+  const [clickedARP, isClickedARP] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
@@ -16,10 +18,22 @@ const EditorResearcherList = (props) => {
     }, 500);
   }, []);
 
+  const setToClose = (cls) => {
+    isClickedARP(cls);
+  };
+
+  const publishPaperHandler = () => {
+    isClickedARP(true)
+  }
 
   return (
     <div className="text-center" style={{ padding: "10px" }}>
       <CircularProgress hidden={initialLoading} />
+      <div style={{ display: "flex" }}>
+        <Button onClick={publishPaperHandler} color="primary" variant="contained">
+          Publish Paper
+        </Button>
+      </div>
       <List {...props}>
         <Datagrid>
           <TextField source="id" />
@@ -30,6 +44,7 @@ const EditorResearcherList = (props) => {
           <ButtonField label="URL" source="researchPaperURL" />
         </Datagrid>
       </List>
+      {clickedARP ? <AddPaper open={clickedARP} close={setToClose}/> : ""}
     </div>
   );
 };

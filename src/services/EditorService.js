@@ -45,6 +45,25 @@ class EditorService{
         return this.loggedIn;
     }
 
+    async addRSPaper(rsPaperDetails){
+        try{
+            await axios.post(EDITOR_BASE_URL + "/publish-paper", rsPaperDetails);
+            return true;
+        }catch(err){
+            console.log(err);
+            return false;
+        }
+    }
+
+    async getRSPapers(){
+        try{
+            const allRSPapers = await axios.get(EDITOR_BASE_URL + "/rs-papers");
+            return allRSPapers.data;
+        }catch(err){
+            console.log(err);
+        }
+    }
+
 }
 
 export default new EditorService();
