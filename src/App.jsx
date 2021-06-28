@@ -8,7 +8,6 @@ import Header from "./components/Header/Header";
 import LandingPage from "./components/LandingPage/LandingPage";
 import Loading from "./components/LandingPage/Loading";
 import AdminLogin from "./components/Login/AdminLogin/AdminLogin";
-
 import * as WorldLoading from "../public/world-loading.json";
 import AdminDashboard from "./components/Admin/AdminDashboard";
 import Register from "./components/User/Register";
@@ -16,7 +15,9 @@ import ReviewerDashboard from "./components/Admin/Reviewer/ReviewerDashboard";
 import ReviewerLogin from "./components/Login/Reviewer Login/ReviewerLogin";
 import EditorLogin from "./components/Login/EditorLogin/EditorLogin";
 import EditorDashboard from "./components/Admin/Editor/EditorDashboard";
+//import WSProposals from "./components/WSProposals/WSProposals";
 import Papers from "./components/Papers/Papers";
+import ConfTopics from "./components/ConfTopics/ConfTopics";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -58,6 +59,12 @@ const App = () => {
             <Route exact path="/papers">
               <Papers />
             </Route>
+            <Route exact path="/topics">
+              <ConfTopics />
+            </Route>
+            {/* <Route exact path="/wsproposals">
+              <WSProposals />
+            </Route> */}
             <Route path="/admin-login">
               <AdminLogin />
             </Route>

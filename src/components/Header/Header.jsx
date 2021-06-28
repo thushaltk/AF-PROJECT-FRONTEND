@@ -69,9 +69,9 @@ const Header = (props) => {
                 <Link className="dropdown-item" to="/papers">
                   Papers{" "}
                 </Link>
-                <a className="dropdown-item" href="#">
-                  Call for Papers
-                </a>
+                <Link className="dropdown-item" to="/topics">
+                  Call for Papers{" "}
+                </Link>
                 <a className="dropdown-item" href="#">
                   Conference Tracks
                 </a>
@@ -93,9 +93,9 @@ const Header = (props) => {
                 Workshops
               </a>
               <div className="dropdown-menu dropdown-menu-right">
-                <a className="dropdown-item" href="#">
-                  Workshops
-                </a>
+              <Link className="dropdown-item" to="/wsproposals">
+                  Workshops{" "}
+                </Link>
                 <a className="dropdown-item" href="#">
                   Call for Workshops
                 </a>
@@ -173,9 +173,6 @@ const Header = (props) => {
                   onClick={userRegistrationNavigator}
                 >
                   User Registration
-                </button>
-                <button className="dropdown-item" onClick={userLoginNavigator}>
-                  User Login
                 </button>
               </div>
             </li>
