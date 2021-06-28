@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { List, Datagrid, TextField } from "react-admin";
 import Button from "@material-ui/core/Button";
 import ApproveButtonField from "./ApproveButtonField";
+import RejectButtonField from "./RejectButtonField";
 import ButtonField from "./ButtonField";
 import {
   CircularProgress,
@@ -41,10 +42,9 @@ const ResearchersList = (props) => {
     await ResearcherService.updateStatus(id, updatedContent);
   };
 
-  const deleteRejectStatusHandler = async () => {
-    await ResearcherService.deleteResearcher(selectedID);
-    //window.location.reload;
-  };
+  const deleteRejectStatusHandler = async (id) => {
+    await ResearcherService.deleteResearcher(id);
+  }; 
 
   return (
     <div className="text-center" style={{ padding: "10px" }}>
@@ -64,13 +64,10 @@ const ResearchersList = (props) => {
             />
           </ThemeProvider>
           <ThemeProvider theme={false}>
-            <Button
-              onClick={deleteRejectStatusHandler}
-              variant="contained"
-              color="secondary"
-            >
-              REJECT
-            </Button>
+          <RejectButtonField
+              source="id"
+              rejectAndDelete={deleteRejectStatusHandler}
+            />
           </ThemeProvider>
         </Datagrid>
       </List>

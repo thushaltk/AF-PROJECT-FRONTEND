@@ -5,6 +5,7 @@ import ButtonField from "./ButtonField";
 import { CircularProgress, ThemeProvider } from "@material-ui/core";
 import WSPresenterService from "../../../services/WSPresenterService";
 import ApproveButtonField from "./ApproveButtonField";
+import RejectButtonField from "./RejectButtonField";
 
 const WSPresenterList = (props) => {
   const [selectedID, setSelectedID] = useState("");
@@ -36,8 +37,8 @@ const WSPresenterList = (props) => {
     await WSPresenterService.updateStatus(id, updatedContent);
   };
 
-  const deleteWSPresenterHandler = async () => {
-    await WSPresenterService.deleteWSPresenter(selectedID);
+  const deleteRejectStatusHandler = async (id) => {
+    await WSPresenterService.deleteWSPresenter(id);
   };
 
   return (
@@ -61,13 +62,10 @@ const WSPresenterList = (props) => {
             />
           </ThemeProvider>
           <ThemeProvider theme={false}>
-            <Button
-              onClick={deleteWSPresenterHandler}
-              variant="contained"
-              color="secondary"
-            >
-              REJECT
-            </Button>
+          <RejectButtonField
+              source="id"
+              rejectAndDelete={deleteRejectStatusHandler}
+            />
           </ThemeProvider>
         </Datagrid>
       </List>
