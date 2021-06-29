@@ -19,9 +19,9 @@ import EditorDashboard from "./components/Admin/Editor/EditorDashboard";
 import Papers from "./components/Papers/Papers";
 import ConfTopics from "./components/ConfTopics/ConfTopics";
 import SpecialSessions from "./components/SpecialSessions/SpecialSessions";
-//import Commitee from "./components/Commitee/Commitee";
-//import PastProceedings from "./components/PastProceedings/PastProceedings";
-//import ContactUs from "./components/ContactUs/ContactUs";
+import Commitee from "./components/Commitee/Commitee";
+import PastProceedings from "./components/PastProceedings/PastProceedings";
+import ContactUs from "./components/ContactUs/ContactUs";
 
 
 const App = () => {
@@ -70,15 +70,15 @@ const App = () => {
             <Route path="/special">
               <SpecialSessions />
             </Route>
-            {/* <Route path="/commitee">
+            <Route path="/commitee">
               <Commitee />
-            </Route> */}
-            {/* <Route path="/contactus">
-              <ContactUs />
             </Route>
+               <Route path="/contactus">
+                <ContactUs />
+               </Route>
             <Route path="/past-proceedings">
               <PastProceedings />
-            </Route> */}
+            </Route>
             {/* <Route exact path="/wsproposals">
               <WSProposals />
             </Route> */}

@@ -64,6 +64,91 @@ class EditorService{
         }
     }
 
+    async addWSProposal(wsProposalDetails){
+        try{
+            await axios.post(EDITOR_BASE_URL + "/publish-proposal", wsProposalDetails);
+            return true;
+        }catch(err){
+            console.log(err);
+            return false;
+        }
+    }
+
+    async getWSProposals(){
+        try{
+            const allWSProposal = await axios.get(EDITOR_BASE_URL + "/ws-proposals");
+            return allWSProposal.data;
+        }catch(err){
+            console.log(err);
+        }
+    }
+
+    async addTopic(topicDetails){
+        try{
+            await axios.post(EDITOR_BASE_URL + "/conference-topics", topicDetails);
+            return true;
+        }catch(err){
+            console.log(err);
+            return false;
+        }
+    }
+
+    async getTopics(){
+        try{
+            const allTopics = await axios.get(EDITOR_BASE_URL + "/conference-topics");
+            return allTopics.data;
+        }catch(err){
+            console.log(err);
+        }
+    }
+
+    async getApprovedTopics(){
+        try{
+            const allTopics = await axios.get(EDITOR_BASE_URL + "/conference-topics/admin-approved");
+            return allTopics.data;
+        }catch(err){
+            console.log(err);
+        }
+    }
+
+    async updateStatus(id, topicDetails){
+        try{
+            await axios.patch(EDITOR_BASE_URL + "/conference-topics" + `/${id}`, topicDetails);
+        }catch(err){
+            if(err.response.status === 500){
+                console.log("Problem with the server");
+            }else{
+                console.log(err.response.data.msg);
+            }
+            console.log(err);
+        }
+    }
+
+    async deleteTopic(id){
+        try{
+            await axios.delete(EDITOR_BASE_URL + "/conference-topics" + `/${id}`);
+        }catch(err){
+            if(err.response.status === 500){
+                console.log("Problem with the server");
+            }else{
+                console.log(err.response.data.msg);
+            }
+            console.log(err);
+        }
+    }
+
+    async addContactDetails(contactDetails){
+        try{
+            await axios.post(EDITOR_BASE_URL + "/inquiries", contactDetails);
+            return true;
+        }catch(err){
+            console.log(err);
+            return false;
+        }
+    }
+
+    
+
 }
 
 export default new EditorService();
