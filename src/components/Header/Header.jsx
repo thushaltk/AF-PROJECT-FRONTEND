@@ -51,11 +51,6 @@ const Header = (props) => {
                 Home{" "}
               </Link>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Keynotes{" "}
-              </a>
-            </li>
             <li className="nav-item dropdown">
               <a
                 className="dropdown-toggle nav-link"
