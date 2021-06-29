@@ -147,8 +147,6 @@ class EditorService{
         }
     }
 
-    
-
 }
 
 export default new EditorService();

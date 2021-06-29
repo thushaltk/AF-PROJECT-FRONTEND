@@ -18,6 +18,7 @@ const EditorResearcherList = (props) => {
     }, 500);
   }, []);
 
+  
   const setToClose = (cls) => {
     isClickedARP(cls);
   };
@@ -25,6 +26,7 @@ const EditorResearcherList = (props) => {
   const publishPaperHandler = () => {
     isClickedARP(true)
   }
+
 
   return (
     <div className="text-center" style={{ padding: "10px" }}>

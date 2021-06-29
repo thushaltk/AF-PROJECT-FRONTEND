@@ -5,7 +5,7 @@ import { Button } from "@material-ui/core";
 
 const ApproveButtonField = (props) => {
     const record = useRecordContext(props);
-
+    console.log(record);
     return(
         <Button variant="contained" color="primary" onClick={()=>{
             props.updateStatus(record.id, record.status);

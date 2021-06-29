@@ -15,7 +15,7 @@ import ReviewerDashboard from "./components/Admin/Reviewer/ReviewerDashboard";
 import ReviewerLogin from "./components/Login/Reviewer Login/ReviewerLogin";
 import EditorLogin from "./components/Login/EditorLogin/EditorLogin";
 import EditorDashboard from "./components/Admin/Editor/EditorDashboard";
-//import WSProposals from "./components/WSProposals/WSProposals";
+import WSProposals from "./components/WSProposals/WSProposals";
 import Papers from "./components/Papers/Papers";
 import ConfTopics from "./components/ConfTopics/ConfTopics";
 import SpecialSessions from "./components/SpecialSessions/SpecialSessions";
@@ -73,15 +73,15 @@ const App = () => {
             <Route path="/commitee">
               <Commitee />
             </Route>
-               <Route path="/contactus">
-                <ContactUs />
-               </Route>
+            <Route path="/contactus">
+              <ContactUs />
+            </Route>
             <Route path="/past-proceedings">
               <PastProceedings />
             </Route>
-            {/* <Route exact path="/wsproposals">
+            <Route exact path="/wsproposals">
               <WSProposals />
-            </Route> */}
+            </Route>
             <Route path="/admin-login">
               <AdminLogin />
             </Route>

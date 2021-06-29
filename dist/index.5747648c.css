@@ -10315,4 +10315,165 @@ body a {
       box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }
   
+.conf-topic-bg {
+    background-image: url(bg.b253e5a0.png);
+    background-size: contain;
+  }
+  
+  .conf-topic-card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 100%;
+    padding: 40px;
+    border-radius: 10%;
+  }
+  
+  .conf-topic-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+.specialsessions-bg{
+    background-image: url(bg.b253e5a0.png);
+    background-size: contain;
+}
+
+.specialsessions-card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 100%;
+    padding: 40px;
+    border-radius: 10%;
+  }
+
+.specialsessions-card:hover{
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+.commitee-bg {
+    background-image: url(bg.b253e5a0.png);
+    background-size: contain;
+  }
+
+.tk{
+    background-image: url(tk.2e00fcee.jpeg);
+    background-size: cover;
+    background-position: center;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+
+}
+
+.eishan{
+    background-image: url(eishan.67f6b5dd.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+
+}
+
+.rusira{
+    background-image: url(rusira.1e2a865c.jpeg);
+    background-size: cover;
+    background-position: center;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+
+}
+
+.kishen{
+    background-image: url(kishen.2753caf8.JPG);
+    background-size: cover;
+    background-position: center;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+
+}
+
+.commitee-links{
+    padding-right: 20px;
+    padding-left: 20px;
+    font-size: 25px;
+}
+.pastproceeding-bg{
+    background-image: url(bg.b253e5a0.png);
+    background-size: contain;
+}
+.contactus-bg{
+  background-image: url(bg.b253e5a0.png);
+  background-size: contain;
+}
+
+
+  .map-clean {
+    color: #313437;
+    background-color: #fff;
+  }
+
+
+  .map-clean p {
+    color: #7d8285;
+  }
+
+
+  .map-clean h2 {
+    font-weight: bold;
+    margin-bottom: 40px;
+    padding-top: 40px;
+    color: inherit;
+  }
+
+
+  @media (max-width:767px) {
+    .map-clean h2 {
+      margin-bottom: 25px;
+      padding-top: 25px;
+      font-size: 24px;
+    }
+  }
+
+
+  .map-clean .intro {
+    font-size: 16px;
+    max-width: 500px;
+    margin: 0 auto 40px;
+  }
+
+
+  .map-clean iframe {
+    background-color: #eee;
+  }
+
+
+  .map{
+    width: 100%;
+    height:450px;
+    background-image: url(map.97ca7b67.jpg);
+  }
+  
+  
+.wsproposals-bg{
+    background-image: url(bg.b253e5a0.png);
+    background-size: contain;
+}
+
+.wsproposals-card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 100%;
+    padding: 40px;
+    border-radius: 10%;
+  }
+
+.wsproposals-card:hover{
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
 /*# sourceMappingURL=index.5747648c.css.map */

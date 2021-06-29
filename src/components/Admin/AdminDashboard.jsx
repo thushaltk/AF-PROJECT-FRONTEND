@@ -10,6 +10,7 @@ import ReviewerList from './Custom/ReviewerList';
 import EditReviewer from './Custom/EditReviewer';
 import Logout from './Custom/Logout';
 import { useHistory } from 'react-router';
+import TopicsList from './Custom/TopicsList';
 
 const AdminDashboard = (props) => {
   let history = useHistory();
@@ -22,6 +23,7 @@ const AdminDashboard = (props) => {
         <Admin dataProvider={restProvider('http://localhost:5000/api')} loginPage={Logout} >
             <Resource name="researcher/reviewer-approved" list={ResearchersList}/>
             <Resource name="wspresenter/reviewer-approved" list={WSPresenterList}/>
+            <Resource name="editor/conference-topics" list={TopicsList}/>
             <Resource name="attendee" list={AttendeeList}/>
             <Resource name="editor" list={EditorList} edit={EditEditor}/>
             <Resource name="reviewer" list={ReviewerList} edit={EditReviewer}/>
