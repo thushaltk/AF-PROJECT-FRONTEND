@@ -10315,4 +10315,40 @@ body a {
       box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }
   
+.conf-topic-bg {
+    background-image: url(bg.b253e5a0.png);
+    background-size: contain;
+  }
+  
+  .conf-topic-card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 100%;
+    padding: 40px;
+    border-radius: 10%;
+  }
+  
+  .conf-topic-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+.specialsessions-bg{
+    background-image: url(bg.b253e5a0.png);
+    background-size: contain;
+}
+
+.specialsessions-card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 100%;
+    padding: 40px;
+    border-radius: 10%;
+  }
+
+.specialsessions-card:hover{
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
 /*# sourceMappingURL=index.0976b8d7.css.map */

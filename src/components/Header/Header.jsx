@@ -72,39 +72,17 @@ const Header = (props) => {
                 <Link className="dropdown-item" to="/topics">
                   Call for Papers{" "}
                 </Link>
-                <a className="dropdown-item" href="#">
-                  Conference Tracks
-                </a>
-                <a className="dropdown-item" href="#">
-                  Submission Guidelines
-                </a>
-                <a className="dropdown-item" href="#">
-                  Important Dates
-                </a>
-              </div>
-            </li>
-            <li className="nav-item dropdown">
-              <a
-                className="dropdown-toggle nav-link"
-                aria-expanded="false"
-                data-toggle="dropdown"
-                href="#"
-              >
-                Workshops
-              </a>
-              <div className="dropdown-menu dropdown-menu-right">
-              <Link className="dropdown-item" to="/wsproposals">
-                  Workshops{" "}
-                </Link>
-                <a className="dropdown-item" href="#">
-                  Call for Workshops
-                </a>
               </div>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                Special Sessions
-              </a>
+              <Link className="nav-link" to="/wsproposals">
+                Workshops{" "}
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/special">
+                Special Sessions{" "}
+              </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/new-user">
@@ -112,28 +90,19 @@ const Header = (props) => {
               </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                {" "}
-                Committee
-              </a>
+              <Link className="nav-link" to="/commitee">
+                Commitee
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                {" "}
-                Past Proceedings
-              </a>
+              <Link className="nav-link" to="/past-proceedings">
+                PastProceedings
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                {" "}
+            <Link className="nav-link" to="/contactus">
                 Contact Us
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                {" "}
-                Programs
-              </a>
+              </Link>
             </li>
           </ul>
           <ul className="navbar-nav ml-auto">
