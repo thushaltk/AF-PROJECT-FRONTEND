@@ -1,6 +1,6 @@
 # Conference Management System (Frontend)
 
-![alt text](https://www.incimages.com/uploaded_files/image/1920x1080/getty_499517325_111832.jpg "Logo Title Text 1")
+![alt text](https://raw.githubusercontent.com/thushaltk/AF-PROJECT-FRONTEND/master/screenshots/Screenshot%202023-10-15%20152308.jpg "Logo Title Text 1")
 
 
 Welcome to the ``` Conference Management System ```, a comprehensive solution for organizing and managing conferences with ease. Developed as part of a challenging assignment for the 3rd year, 1st semester of the BSc (Hons) in IT specialized in Software Engineering program at the prestigious Sri Lanka Institute of Information Technology, this project showcases the power of the MERN (MongoDB, Express.js, React, Node.js) stack. With a focus on seamless user experience and efficient data management, our conference management system is designed to simplify the complexities of event planning and coordination. Explore the features, contribute to the codebase, and elevate your conference management experience with our intuitive software solution.
@@ -21,6 +21,10 @@ Welcome to the ``` Conference Management System ```, a comprehensive solution fo
 3. run "npm start"
 
 # Screenshots
+
+![alt text](https://raw.githubusercontent.com/thushaltk/AF-PROJECT-FRONTEND/master/screenshots/Screenshot%202023-10-15%20152426.jpg "Logo Title Text 1")
+![alt text](https://raw.githubusercontent.com/thushaltk/AF-PROJECT-FRONTEND/master/screenshots/Screenshot%202023-10-15%20152453.jpg "Logo Title Text 1")
+![alt text](https://raw.githubusercontent.com/thushaltk/AF-PROJECT-FRONTEND/master/screenshots/Screenshot%202023-10-15%20152519.jpg "Logo Title Text 1")
 
 # Contributors
 1. Thushal Kulatilake (me) -
